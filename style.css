@@ -5,7 +5,7 @@
 }
 
 html {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-size: 85%;
 }
 
@@ -97,11 +97,11 @@ li {
 }
 
 .page__content__problems li::before {
-  content: '✔️ ';
+  content: "✔️ ";
 }
 
 .page__content__title::before {
-  content: '';
+  content: "";
   display: flex;
   width: 5rem;
   height: 4.5rem;

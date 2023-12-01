@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background-white: #fff;
+}
+
+body {
+  background: var(--background-white);
+}
+
+.contact-us-background-gradient {
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 251, 242, 1) 35%,
+    rgba(255, 179, 65, 1) 35%
+  );
+}
+
+.about-us-background-gradient {
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 179, 65, 1) calc(50% - 29.3125rem),
+    rgba(255, 251, 242, 1) calc(50% - 29.3125rem)
+  );
+}
+
+.landing-page-background-gradient {
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 251, 242, 1) calc(50% + 16.5rem),
+    rgba(255, 179, 65, 1) calc(50% + 16.5rem)
+  );
+}
