@@ -146,14 +146,10 @@ const ImageCard: React.FC<ImageCardProps> = ({
       className={`flex flex-col px-[2.5rem] py-[1.5625rem] self-stretch bg-[#F4F4F4] rounded-[0.875rem] w-[37.48375rem] h-[25rem]`}
     >
       <div className="flex flex-col gap-[0.44rem] w-[100%]">
-        <h3
-          className={`${nunito700.className} text-xl leading-[1.6875rem] text-center text-grey-800`}
-        >
+        <h3 className={`${nunito700.className} text-xl leading-[1.6875rem] text-center text-grey-800`}>
           {title}
         </h3>
-        <span
-          className={`${nunito400.className} text-xs leading-[1.375rem] text-center text-grey-700`}
-        >
+        <span className={`${nunito400.className} text-xs leading-[1.375rem] text-center text-grey-700`}>
           {description}
         </span>
       </div>
@@ -169,14 +165,10 @@ const Index = () => {
         <Container className="flex w-[100%] mr-[auto] ml-[auto] pb-[8.56rem]">
           <section className="flex w-[100%] pt-[3.88rem] items-center gap-10">
             <div className="flex flex-col w-[100%] gap-[1.56rem]">
-              <h1
-                className={`${nunito_sans800.className} text-[3.625rem] leading-[4.25rem] text-grey-900 min-w-[19ch] max-w-[19ch]`}
-              >
+              <h1 className={`${nunito_sans800.className} text-[3.625rem] leading-[4.25rem] text-grey-900 min-w-[19ch] max-w-[19ch]`}>
                 Explore the possibilities of a redefined healthcare experience.
               </h1>
-              <p
-                className={`${nunito500.className} text-xl leading-[1.75rem] text-grey-700 min-w-[47ch] max-w-[47ch]`}
-              >
+              <p className={`${nunito500.className} text-xl leading-[1.75rem] text-grey-700 min-w-[47ch] max-w-[47ch]`}>
                 Enhance your patient care by digitizing your operations using
                 the power of technology. Ankora is your partner in transforming
                 the way you deliver healthcare services
@@ -200,9 +192,7 @@ const Index = () => {
       </div>
       <Container className="flex flex-col w-[100%] pt-[4.94rem] mr-auto ml-auto gap-[3.75rem]">
         <div className="flex flex-col gap-[0.31rem] w-[100%] justify-center items-center">
-          <h2
-            className={`${nunito_sans700.className} text-grey-900 leading-normal text-[2.375rem]`}
-          >
+          <h2 className={`${nunito_sans700.className} text-grey-900 leading-normal text-[2.375rem]`}>
             Easy Healthcare Unification
           </h2>
           <p
@@ -230,13 +220,11 @@ const Index = () => {
             })}
         </div>
       </Container>
-      <div className="bg-grey-900 w-[100%]">
+      <div id="features" className="bg-grey-900 w-[100%]">
         <Container className="mr-auto ml-auto py-[7.06rem] w-[100%] flex flex-col gap-[3.44rem]">
           <div className="flex justify-between items-end w-[100%]">
             <div className="flex flex-col">
-              <h4
-                className={`${nunito600.className} text-base leading-normal text-accent-21`}
-              >
+              <h4 className={`${nunito600.className} text-base leading-normal text-accent-21`}>
                 WHY CHOOSE US
               </h4>
               <h5

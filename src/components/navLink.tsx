@@ -14,7 +14,7 @@ interface NavLinkProps extends LinkProps {
 const NavLink: React.FC<NavLinkProps> = ({
   children,
   styleActive = true,
-  className = "",
+  className: externalClassName = "", 
   activeClassStyles = "",
   ...props
 }) => {
@@ -27,7 +27,7 @@ const NavLink: React.FC<NavLinkProps> = ({
 
   const combinedClassName = `text-base ${defaultStyles} ${
     isActive && styleActive && activeClassStyles
-  } ${className}`;
+  } ${externalClassName}`;
 
   return (
     <Link className={combinedClassName} {...props}>

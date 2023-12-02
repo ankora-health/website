@@ -16,7 +16,7 @@ export const TextArea: React.FC<InputProps> = ({
     <div className="min-w-[15.625rem] flex-col gap-[0.625rem] inline-flex">
       <Label>{label}</Label>
       <textarea
-        className={`-:resize-none placeholder:text-sm placeholder:text-[#ccc] px-[0.94rem] py-[0.81rem] focus:outline-none text-black rounded-[0.625rem] bg-[#F9F9F9] ${nunito700.className} ${className}`}
+        className={`resize-none placeholder:text-sm placeholder:text-[#ccc] px-[0.94rem] py-[0.81rem] focus:outline-none text-black rounded-[0.625rem] bg-[#F9F9F9] ${nunito700.className} ${className}`}
         {...props}
       />
     </div>

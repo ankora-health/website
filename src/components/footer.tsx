@@ -23,7 +23,7 @@ interface NavigationProps {
 const links: Props[] = [
   { href: `/about`, label: `About Us` },
   { href: `/contact`, label: `Contact Us` },
-  { href: `/features`, label: `Features` },
+  { href: `/#features`, label: `Features` },
   { href: `/faqs`, label: `FAQ's` },
   { href: `/privacy`, label: `Privacy Policy` },
   { href: `/terms`, label: `Terms of Use` },
