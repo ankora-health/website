@@ -21,7 +21,7 @@ const Button: React.FC<ButtonProps> = ({
   className = "",
   ...props
 }) => {
-  const buttonClasses = `-:w-max inline-flex items-center justify-center py-2.5 gap-2.5 px-5 rounded-button ${VARIANT_MAPS[variant]} ${nunito600.className} ${className}`;
+  const buttonClasses = `-:w-max -:h-max -:text-base inline-flex items-center justify-center py-2.5 gap-2.5 px-5 rounded-button leading-[1.25rem] ${VARIANT_MAPS[variant]} ${nunito600.className} ${className}`;
 
   return (
     <button className={buttonClasses} {...props}>

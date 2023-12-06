@@ -5,20 +5,20 @@ import { inter800 } from "@/styles/fonts";
 
 const ContactForm = () => {
   return (
-    <form className="flex p-[2.5rem] bg-white rounded-[1.5626rem]">
-      <fieldset className="flex flex-col gap-[1.88rem]">
+    <form className="flex desktop:p-[2.5rem] p-[1.56rem] bg-white rounded-[1.5626rem]">
+      <fieldset className="flex flex-col desktop:gap-[1.88rem] gap-5 w-full">
         <h3
-          className={`${inter800.className} leading-[2.875rem] text-[2.3125rem]`}
+          className={`${inter800.className} leading-[2.875rem] text-xl desktop:text-[2.3125rem]`}
         >
           Contact Us
         </h3>
 
-        <div className="flex gap-[3.06rem]">
+        <div className="flex flex-col desktop:flex-row desktop:gap-[3.06rem] gap-5">
           <Input label="First Name" placeholder="Jane" />
           <Input label="Last Name" placeholder="Danielle" />
         </div>
 
-        <div className="flex gap-[3.06rem]">
+        <div className="flex gap-5 desktop:gap-[3.06rem] flex-col desktop:flex-row">
           <Input label="Email Address" placeholder="@gmail.com" />
           <Input label="Phone Number" placeholder="080 000 0000" />
         </div>

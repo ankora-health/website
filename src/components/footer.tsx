@@ -65,11 +65,11 @@ const Footer = () => {
 
   return (
     <Container className="flex justify-between items-center">
-      <footer className="w-screen flex justify-between flex-col px-[3.12rem] pt-[3.56rem] pb-[0.62rem] bg-footer rounded-[1.5625rem] h-[28.8125rem]">
-        <div className="flex justify-between w-full">
-          <div className="flex max-w-[50ch] flex-col">
+      <footer className="w-screen flex justify-between flex-col px-5 desktop:px-[3.12rem] desktop:pt-[3.56rem] pt-[3.38rem] pb-[0.62rem] bg-footer rounded-[1.5625rem]">
+        <div className="flex justify-between w-full flex-col desktop:flex-row ">
+          <div className="flex desktop:max-w-[50ch] max-w-full flex-col desktop:mb-[6.125rem] mb-[2.06rem]">
             <p
-              className={`${nunito700.className} text-[1.75rem] leading[2.76175rem] text-primary mb-[0.31rem]`}
+              className={`${nunito700.className} desktop:text-[1.75rem] text-2xl leading[2.76175rem] text-primary mb-[0.31rem]`}
             >
               Experience the Future of Endless Possibilities with Ankora!
             </p>
@@ -79,24 +79,26 @@ const Footer = () => {
               We provide more than just healthcare solutions but redefine the
               experience for Patients and Caregivers
             </span>
-            <Button className="text-xl w-max">Get Started</Button>
+            <Button className="desktop:text-xl w-max">
+              Get Started
+            </Button>
           </div>
-
-          <div className="flex w-max gap-[6.69rem]">
+ 
+          <div className="flex w-max gap-[4.94rem] desktop:gap-[6.69rem] pb-[1.44rem]">
             <Navigation title="Company" links={links.slice(0, 3)} />
             <Navigation title="Learn More" links={links.slice(3, 6)} />
           </div>
         </div>
 
-        <div className="border-solid border-grey-300 border-t py-[1.25rem] flex justify-between w-full">
-          <div className="flex gap-[2.38rem]">
+        <div className="border-solid border-grey-300 border-t py-[1.25rem] flex justify-between w-full items-center flex-wrap-reverse desktop:gap-8 gap-[0.62rem]">
+          <div className="flex gap-[0.31rem] md:gap-[2.38rem] flex-col basis-full md:flex-row md:basis-auto">
             {links.length > 0 &&
-              links.slice(5, 7).map(({ href, label }, idx) => {
+              links.slice(4, 7).map(({ href, label }, idx) => {
                 return (
                   <NavLink
                     styleActive={false}
                     key={idx}
-                    className={`${nunito400.className} text-sm text-grey-700 leading-[1.875rem]`}
+                    className={`${nunito400.className} flex text-sm text-grey-700 leading-[1.875rem]`}
                     href={href}
                   >
                     {label}

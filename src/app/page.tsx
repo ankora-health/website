@@ -143,13 +143,13 @@ const ImageCard: React.FC<ImageCardProps> = ({
 }) => {
   return (
     <article
-      className={`flex flex-col px-[2.5rem] py-[1.5625rem] self-stretch bg-[#F4F4F4] rounded-[0.875rem] w-[37.48375rem] h-[25rem]`}
+      className={`flex flex-col py-[2.5rem] px-[1.5625rem] self-stretch bg-[#F4F4F4] rounded-[0.875rem] w-[20.5rem] desktop:w-[37.8rem] h-auto desktop:h-[25rem] gap-[1.88rem]`}
     >
       <div className="flex flex-col gap-[0.44rem] w-[100%]">
         <h3 className={`${nunito700.className} text-xl leading-[1.6875rem] text-center text-grey-800`}>
           {title}
         </h3>
-        <span className={`${nunito400.className} text-xs leading-[1.375rem] text-center text-grey-700`}>
+        <span className={`${nunito400.className} text-sm leading-[1.375rem] text-center text-grey-700`}>
           {description}
         </span>
       </div>
@@ -162,13 +162,13 @@ const Index = () => {
   return (
     <div className="flex w-screen flex-col mb-[2.5rem]">
       <div className="w-screen landing-page-background-gradient">
-        <Container className="flex w-[100%] mr-[auto] ml-[auto] pb-[8.56rem]">
-          <section className="flex w-[100%] pt-[3.88rem] items-center gap-10">
-            <div className="flex flex-col w-[100%] gap-[1.56rem]">
-              <h1 className={`${nunito_sans800.className} text-[3.625rem] leading-[4.25rem] text-grey-900 min-w-[19ch] max-w-[19ch]`}>
+        <Container className="flex w-[100%] mx-auto destop:pb-[8.56rem]">
+          <section className="flex w-[100%] pt-[3.5rem] desktop:pt-[3.88rem] items-center gap-[2.31rem] desktop:gap-10 flex-col desktop:flex-row">
+            <div className="flex flex-col w-[100%] gap-[1.12rem] desktop:gap-[1.56rem]">
+              <h1 className={`${nunito_sans800.className} text-4xl desktop:text-[3.625rem] leading-[2.625rem] desktop:leading-[4.25rem] text-grey-900 desktop:min-w-[19ch] desktop:max-w-[19ch]`}>
                 Explore the possibilities of a redefined healthcare experience.
               </h1>
-              <p className={`${nunito500.className} text-xl leading-[1.75rem] text-grey-700 min-w-[47ch] max-w-[47ch]`}>
+              <p className={`${nunito500.className} text-lg desktop:text-xl leading-[1.75rem] text-grey-700 desktop:min-w-[47ch] desktop:max-w-[47ch]`}>
                 Enhance your patient care by digitizing your operations using
                 the power of technology. Ankora is your partner in transforming
                 the way you deliver healthcare services
@@ -190,13 +190,13 @@ const Index = () => {
           </section>
         </Container>
       </div>
-      <Container className="flex flex-col w-[100%] pt-[4.94rem] mr-auto ml-auto gap-[3.75rem]">
+      <Container className="flex flex-col w-[100%] pt-[4.94rem] mx-auto gap-[3.75rem]">
         <div className="flex flex-col gap-[0.31rem] w-[100%] justify-center items-center">
-          <h2 className={`${nunito_sans700.className} text-grey-900 leading-normal text-[2.375rem]`}>
+          <h2 className={`${nunito_sans700.className} text-grey-900 leading-normal text-[1.625rem] desktop:text-[2.375rem] text-center w-10/12`}>
             Easy Healthcare Unification
           </h2>
           <p
-            className={`${nunito500.className} text-base text-grey-700 leading-[1.4375rem] text-center max-w-[65ch]`}
+            className={`${nunito500.className} text-[0.8125rem] desktop:text-base text-grey-700 leading-[1.4375rem] text-center mx-9 desktop:max-w-[65ch]`}
           >
             Discover the potentials to unify and shape a healthier and more
             connected healthcare future. With Ankora, you can expect more than
@@ -204,7 +204,7 @@ const Index = () => {
             transformation.
           </p>
         </div>
-        <div className="flex gap-[1.88rem] w-[100%] flex-wrap">
+        <div className="flex gap-[1.88rem] justify-center w-[100%] flex-wrap desktop:justify-between mb-8">
           {imageCardContent.length > 0 &&
             imageCardContent.map((el, idx) => {
               return (
@@ -220,22 +220,22 @@ const Index = () => {
             })}
         </div>
       </Container>
-      <div id="features" className="bg-grey-900 w-[100%]">
-        <Container className="mr-auto ml-auto py-[7.06rem] w-[100%] flex flex-col gap-[3.44rem]">
-          <div className="flex justify-between items-end w-[100%]">
+      <div id="features" className="bg-grey-900 w-[100%] flex justify-center">
+        <Container className="py-14 px-[1.56rem] desktop:px-0 desktop:py-[7.06rem] w-[100%] flex flex-col gap-[3.44rem]">
+          <div className="flex justify-between w-[100%] flex-col desktop:flex-row gap-[2.19rem] desktop:items-end">
             <div className="flex flex-col">
-              <h4 className={`${nunito600.className} text-base leading-normal text-accent-21`}>
+              <h4 className={`${nunito600.className} text-base leading-normal text-accent-21 mb-5 desktop:mb-0`}>
                 WHY CHOOSE US
               </h4>
               <h5
-                className={`${nunito_sans400.className} text-[2.375rem] leading-[2.875rem] text-accent-25 max-w-[30ch]`}
+                className={`${nunito_sans400.className} desktop:text-[2.375rem] text-[1.625rem] leading-normal desktop:leading-[2.875rem] text-accent-25 max-w-[30ch]`}
               >
                 Ankora enables data-driven quality improvement initiatives.
               </h5>
             </div>
             <Button>Book a Demo</Button>
           </div>
-          <div className="flex gap-[1.88rem] w-[100%] flex-wrap">
+          <div className="flex gap-[1.88rem] w-[100%] flex-wrap justify-center">
             {content.length > 0 &&
               content.map(({ text, title }, idx) => {
                 return (

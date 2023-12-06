@@ -9,15 +9,15 @@ import ContactForm from "./components/contactForm";
 const Index = () => {
   return (
     <div className="w-screen contact-us-background-gradient mb-[3.88rem]">
-      <Container className="flex w-[100%] mr-[auto] ml-[auto] pt-[4.13rem] pb-[4.94rem] gap-[4.62rem]">
-        <section className="flex flex-col w-full pt-[2.5rem]">
+      <Container className="flex flex-col desktop:flex-row w-[100%] mr-[auto] ml-[auto] pt-[4.13rem] pb-[4.94rem] gap-[4.62rem]">
+        <section className="flex flex-col w-full pt-[2.5rem] gap-5">
           <h1
-            className={`${inter800.className} text-[3.625rem] leading-[4.25rem] text-grey-900 mb-[1.37rem]`}
+            className={`${inter800.className} text-[2.25rem] desktop:text-[3.625rem] leading-[2.625rem] desktop:leading-[4.25rem] text-grey-900 desktop:mb-[1.37rem] mb-0`}
           >
             Your hospital management dashboard
           </h1>
           <h2
-            className={`${nunito_sans400.className} text-xl max-w-[45ch] mb-8`}
+            className={`${nunito_sans400.className} text-xl max-w-[45ch] desktop:mb-8 mb-0`}
           >
             Ankora dashboard allows you to effectively manage your patient’s
             data; your Nurses and Doctors Schedule, and all your hospital

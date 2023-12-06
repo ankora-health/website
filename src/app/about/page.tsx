@@ -12,15 +12,15 @@ const Index = () => {
   return (
     <div className="w-screen flex flex-col gap-[4.31rem]">
       <div className="w-screen about-us-background-gradient gap-[4.62rem]">
-        <Container className="flex flex-col w-[100%] mr-[auto] ml-[auto] pt-[4.13rem] gap-[3.19rem]">
-          <section className="flex w-full pt-[2.5rem] justify-between gap-[7.31rem]">
+        <Container className="flex flex-col w-[100%] m-[auto] desktop:pt-[4.13rem] gap-[3.19rem]">
+          <section className="flex flex-col desktop:flex-row w-full pt-14 desktop:pt-10 justify-between gap-[1.12rem] desktop:gap-[7.31rem]">
             <h1
-              className={`${nunito_sans800.className} text-[3.625rem] leading-[4.25rem] text-grey-900 w-[34rem]`}
+              className={`${nunito_sans800.className} desktop:text-[3.625rem] text-4xl leading-[2.625rem] desktop:leading-[4.25rem] text-grey-900 desktop:w-[34rem]`}
             >
               Our story, Why we have done what we did
             </h1>
             <p
-              className={`${nunito400.className} text-xl text-grey-700 w-[37.1875rem]`}
+              className={`${nunito400.className} text-base leading-normal desktop:text-xl text-grey-700 desktop:w-[37.1875rem]`}
             >
               At Ankora, we believe in a future where healthcare is not just a
               service but a seamless journey, where patients receive
@@ -39,7 +39,7 @@ const Index = () => {
                 <Image
                   key={index}
                   src={image}
-                  className="rounded-[0.9375rem]"
+                  className="rounded-[0.9375rem] w-[6rem] desktop:w-[339px] desktop:h-[312px]"
                   width={339}
                   height={312}
                   alt={`about_us_picture_${index}`}
@@ -50,21 +50,23 @@ const Index = () => {
           </section>
         </Container>
       </div>
-      <Container className="p-[4.3rem] bg-grey-900 w-[100%] mr-[auto] ml-[auto] rounded-[0.9375rem] mb-[4.31rem] flex items-center justify-between">
-        <div className="flex flex-col gap-[0.63rem]">
-          <h2
-            className={`${nunito_sans800.className} text-[2.375rem] leading-[4.25rem] text-accent-23`}
-          >
-            Our Mission
-          </h2>
-          <p
-            className={`${nunito_sans400.className} text-accent-25 text-xl min-w-[49ch] max-w-[49ch]`}
-          >
-            To make healthcare more accessible, efficient, and personalised for
-            both the patients and healthcare stakeholders in Africa
-          </p>
+      <Container className="mx-auto">
+        <div className="py-10 px-[1.94rem] desktop:p-[4.3rem] bg-grey-900 mx-auto rounded-[0.9375rem] mb-[4.31rem] flex items-start desktop:items-end justify-between flex-col desktop:flex-row gap-5">
+          <div className="flex flex-col gap-[0.63rem]">
+            <h2
+              className={`${nunito_sans800.className} text-[1.75rem] leading-normal desktop:text-[2.375rem] desktop:leading-[4.25rem] text-accent-23`}
+            >
+              Our Mission
+            </h2>
+            <p
+              className={`${nunito_sans400.className} text-accent-25 text-base desktop:text-xl desktop:min-w-[49ch] desktop:max-w-[49ch]`}
+            >
+              To make healthcare more accessible, efficient, and personalised for
+              both the patients and healthcare stakeholders in Africa
+            </p>
+          </div>
+          <Button className="min-w-max">Get Started</Button>
         </div>
-        <Button className="min-w-max">Get Started</Button>
       </Container>
     </div>
   );

@@ -11,15 +11,15 @@ const config: Config = {
   darkMode: "media",
   theme: {
     screens: {
-      sm: "480px",
-      md: "768px",
-      lg: "976px",
-      xl: "1240px",
-    },
-    fontFamily: {
-      sans: ["Nunito Sans", ...defaultTheme.fontFamily.sans],
+      mobile: "390px",
+      desktop: "1240px",
+      ...defaultTheme.screens
     },
     extend: {
+      fontFamily: {
+        sans: ["Nunito Sans", ...defaultTheme.fontFamily.sans],
+        inter: ["Inter"]
+      },
       fontSize: {
         base: ["1rem", { lineHeight: "1.125rem" }],
         xl: ["1.25rem", { lineHeight: "1.875rem" }],

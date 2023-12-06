@@ -1,6 +1,6 @@
 import Accordion from "@/components/accordion";
 import Container from "@/components/container";
-import { inter800 } from "@/styles/fonts";
+import { inter800, nunito_sans700 } from "@/styles/fonts";
 
 const links = [
   { 
@@ -45,13 +45,13 @@ const links = [
 
 const Index = () => {
   return (
-    <Container className="flex flex-col w-[100%] mt-[3.31rem] mb-[4.81rem] mr-[auto] ml-[auto] pt-[4.47rem] pl-[3.87rem] pr-[3.5rem] pb-[4.07rem]">
+    <Container className="flex flex-col w-[100%] mt-[3.31rem] mb-[2.75rem] desktop:mb-[4.81rem] mx-auto desktop:pt-[4.47rem] desktop:pl-[3.87rem] desktop:pr-[3.5rem] desktop:pb-[4.07rem] gap-[1.18rem] desktop:gap-0">
       <h1
-        className={`${inter800.className} text-[3.625rem] leading-[4.25rem] text-grey-900 pb-[3.06rem]`}
+        className={`desktop:font-inter font-sans font-bold desktop:font-extrabold text-4xl desktop:text-[3.625rem] leading-[2.625rem] desktop:leading-[4.25rem] text-grey-900 desktop:pb-[3.06rem]`}
       >
         Frequently Asked Questions
       </h1>
-      <hr className="bg-gradient-to-b from-[rgba(0,0,0,0.20)] via-[rgba(0,0,0,0.20)] to-[#EDE9E5]" />
+      <hr className="hidden desktop:flex bg-gradient-to-b from-[rgba(0,0,0,0.20)] via-[rgba(0,0,0,0.20)] to-[#EDE9E5]" />
 
       <article className="flex flex-col">
         {links.length > 0 &&
