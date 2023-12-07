@@ -1,6 +1,3 @@
-import parse from 'html-react-parser';
-
-
 export const articles = [
   { 
     href: "#introduction", 

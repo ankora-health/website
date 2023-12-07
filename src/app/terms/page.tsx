@@ -20,7 +20,7 @@ const Index = () => {
         Terms Of Use
       </h1>
       <p className={`${nunito_sans400.className} text-grey-700 text-base leading-[1.5rem] desktop:text-xl desktop:leading-[2.04625rem] pb-5`}>
-        Welcome to our Terms and Conditions of Use. It might be alluring to overlook these Terms of Service, yet it's crucial to define the expectations regarding your use of Ankora’s services and what we anticipate from you.
+        Welcome to our Terms and Conditions of Use. It might be alluring to overlook these Terms of Service, yet it’s crucial to define the expectations regarding your use of Ankora’s services and what we anticipate from you.
       </p>
       <hr className="hidden desktop:block bg-gradient-to-b from-[rgba(0,0,0,0.20)] via-[rgba(0,0,0,0.20)] to-[#EDE9E5]" />
 
