@@ -5,8 +5,7 @@ import NavLink from "@/components/navLink";
 import useHash from "@/hooks/useHash";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { inter800, nunito600, nunito_sans400, nunito_sans700 } from "@/styles/fonts";
-import { articles } from "./articles";
-
+import { terms } from "./terms";
 
 
 const Index = () => {
@@ -18,8 +17,11 @@ const Index = () => {
       <h1
         className={`${desktop ? inter800.className : nunito_sans700.className} text-4xl desktop:text-[3.625rem] leading-[2.625rem] desktop:leading-[4.25rem] text-grey-900 desktop:pb-[3.06rem]`}
       >
-        Privacy Policy
+        Terms Of Use
       </h1>
+      <p className={`${nunito_sans400.className} text-grey-700 text-base leading-[1.5rem] desktop:text-xl desktop:leading-[2.04625rem] pb-5`}>
+        Welcome to our Terms and Conditions of Use. It might be alluring to overlook these Terms of Service, yet it's crucial to define the expectations regarding your use of Ankora’s services and what we anticipate from you.
+      </p>
       <hr className="hidden desktop:block bg-gradient-to-b from-[rgba(0,0,0,0.20)] via-[rgba(0,0,0,0.20)] to-[#EDE9E5]" />
 
       <section className="flex justify-between pt-[1.8rem] desktop:pt-[4.12rem] gap-[2.38rem] mb-[2.56rem]">
@@ -30,7 +32,7 @@ const Index = () => {
             sections
           </h2>
           <ul className="flex flex-col gap-[0.44rem]">
-            {articles.map(({ href, label }, idx) => {
+            {terms.map(({ href, label }, idx) => {
                 const isActive = href === hash;
                 const activeStyles = "bg-accent-25 rounded-lg";
 
@@ -49,28 +51,27 @@ const Index = () => {
               })}
           </ul>
         </div>
-        <div className="flex flex-col gap-[3.06rem] desktop:max-h-[48rem] desktop:overflow-y-auto desktop:no-scrollbar">
-          {articles.map(({ href, label, content }, idx) => {
-              return (
-                <article
-                  key={idx}
-                  id={href.substring(1)}
-                  className="flex flex-col text-justify gap-[0.94rem]"
+        <div className="flex flex-col gap-[3.06rem] desktop:max-h-[55rem] desktop:overflow-y-auto desktop:no-scrollbar">
+          {terms.map(({ href, label, content }, idx) => {
+            return (
+              <article
+                key={idx}
+                id={href.substring(1)}
+                className="flex flex-col text-justify gap-[0.94rem]"
+              >
+                <h3
+                  className={`text-grey-900 text-[1.75rem] desktop:text-[2rem] ${nunito600.className} desktop:leading-[2.40625rem]`}
                 >
-                  <h3
-                    className={`text-grey-900 text-[1.75rem] desktop:text-[2rem] ${nunito600.className} desktop:leading-[2.40625rem]`}
-                  >
-                    {`${idx + 1}. ${label}`}
-                  </h3>
-                  <p
-                    className={`${nunito_sans400.className} text-grey-700 text-base leading-[1.5rem] desktop:text-xl desktop:leading-[2.04625rem] [&>li]:list-roman`}
-                  >
-                    {parse(content)}
-                  </p>
-                </article>
-              );
-            })}
-            <b>Last updated October 2023</b>
+                  {`${idx + 1}. ${label}`}
+                </h3>
+                <div
+                  className={`${nunito_sans400.className} text-grey-700 text-base leading-[1.5rem] desktop:text-xl desktop:leading-[2.04625rem] [&>li]:list-disc [&>h6]:font-bold [&>h6]:pt-2`}
+                >
+                  {parse(content)}
+                </div>
+              </article>
+            );
+          })}
         </div>
       </section>
     </Container>

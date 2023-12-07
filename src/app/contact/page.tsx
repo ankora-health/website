@@ -1,18 +1,21 @@
+'use client'
 import Container from "@/components/container";
-import { inter800, nunito_sans400 } from "@/styles/fonts";
+import { inter800, nunito_sans400, nunito_sans700 } from "@/styles/fonts";
 import { ExternalLinks } from "./components/externalLinks";
 import { EmailIcon } from "@/assets/svg/email";
 import { DeviceIcon } from "@/assets/svg/device";
 import { LocationIcon } from "@/assets/svg/location";
 import ContactForm from "./components/contactForm";
+import useMediaQuery from "@/hooks/useMediaQuery";
 
 const Index = () => {
+  const desktop = useMediaQuery('(min-width: 1240px)');
   return (
     <div className="w-screen contact-us-background-gradient mb-[3.88rem]">
-      <Container className="flex flex-col desktop:flex-row w-[100%] mr-[auto] ml-[auto] pt-[4.13rem] pb-[4.94rem] gap-[4.62rem]">
-        <section className="flex flex-col w-full pt-[2.5rem] gap-5">
+      <Container className="flex flex-col desktop:flex-row w-[100%] mx-[auto] pt-14 desktop:pt-[4.13rem] pb-[4.94rem] gap-5 desktop:gap-[4.62rem]">
+        <section className="flex flex-col w-full pt-0 desktop:pt-[2.5rem] gap-5">
           <h1
-            className={`${inter800.className} text-[2.25rem] desktop:text-[3.625rem] leading-[2.625rem] desktop:leading-[4.25rem] text-grey-900 desktop:mb-[1.37rem] mb-0`}
+            className={`${desktop ? inter800.className : nunito_sans700.className} text-[2.25rem] desktop:text-[3.625rem] leading-[2.625rem] desktop:leading-[4.25rem] text-grey-900 desktop:mb-[1.37rem] mb-0`}
           >
             Your hospital management dashboard
           </h1>
@@ -31,7 +34,7 @@ const Index = () => {
             />
             <ExternalLinks
               icon={<DeviceIcon />}
-              text="0809 000 9999, 0808 000 8888"
+              text="0816 274 0774, 0701 426 1943"
             />
             <ExternalLinks
               icon={<LocationIcon />}

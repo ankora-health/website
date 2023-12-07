@@ -51,7 +51,7 @@ const Index = () => {
         </Container>
       </div>
       <Container className="mx-auto">
-        <div className="py-10 px-[1.94rem] desktop:p-[4.3rem] bg-grey-900 mx-auto rounded-[0.9375rem] mb-[4.31rem] flex items-start desktop:items-end justify-between flex-col desktop:flex-row gap-5">
+        <div className="py-10 px-[1.94rem] desktop:p-[4.3rem] bg-grey-900 mx-auto rounded-[0.9375rem] mb-[4.31rem] flex items-start desktop:items-center justify-between flex-col desktop:flex-row gap-5">
           <div className="flex flex-col gap-[0.63rem]">
             <h2
               className={`${nunito_sans800.className} text-[1.75rem] leading-normal desktop:text-[2.375rem] desktop:leading-[4.25rem] text-accent-23`}

@@ -1,7 +1,7 @@
 import { nunito600 } from "@/styles/fonts";
 import React, { ReactNode, ButtonHTMLAttributes } from "react";
 
-type ButtonVariant = "solid" | "outline" | "text" | 'unstyled';
+type ButtonVariant = "solid" | "outline" | "text" | "unstyled";
 
 const VARIANT_MAPS: Record<ButtonVariant, string> = {
   text: "bg-transparent",
@@ -21,7 +21,8 @@ const Button: React.FC<ButtonProps> = ({
   className = "",
   ...props
 }) => {
-  const buttonClasses = `-:w-max -:h-max -:text-base inline-flex items-center justify-center py-2.5 gap-2.5 px-5 rounded-button leading-[1.25rem] ${VARIANT_MAPS[variant]} ${nunito600.className} ${className}`;
+  const buttonClasses = variant === "unstyled" ? className : 
+  `btn ${VARIANT_MAPS[variant]} ${nunito600.className} ${className}`;
 
   return (
     <button className={buttonClasses} {...props}>

@@ -8,7 +8,7 @@ const ContactForm = () => {
     <form className="flex desktop:p-[2.5rem] p-[1.56rem] bg-white rounded-[1.5626rem]">
       <fieldset className="flex flex-col desktop:gap-[1.88rem] gap-5 w-full">
         <h3
-          className={`${inter800.className} leading-[2.875rem] text-xl desktop:text-[2.3125rem]`}
+          className={`${inter800.className} leading-[2.875rem] text-2xl desktop:text-[2.3125rem]`}
         >
           Contact Us
         </h3>
@@ -29,7 +29,7 @@ const ContactForm = () => {
           placeholder="Type your message here"
         />
 
-        <Button className="w-[15.625rem]">Send</Button>
+        <Button className="w-full desktop:w-[15.625rem]">Send</Button>
       </fieldset>
     </form>
   );

@@ -160,7 +160,7 @@ const ImageCard: React.FC<ImageCardProps> = ({
 
 const Index = () => {
   return (
-    <div className="flex w-screen flex-col mb-[2.5rem]">
+    <div className="flex w-screen h-max flex-col mb-[2.5rem] bg-white">
       <div className="w-screen landing-page-background-gradient">
         <Container className="flex w-[100%] mx-auto destop:pb-[8.56rem]">
           <section className="flex w-[100%] pt-[3.5rem] desktop:pt-[3.88rem] items-center gap-[2.31rem] desktop:gap-10 flex-col desktop:flex-row">

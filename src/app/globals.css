@@ -12,6 +12,25 @@ body {
   width: 100vw;
 }
 
+
+@layer components {
+  .btn {
+    width: max-content;
+    height: max-content;
+    font-size: 1rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.25rem;
+    border-radius: 0.4375rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+    gap: 0.625rem;
+  }
+}
+
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar {
     display: none;
@@ -33,8 +52,8 @@ body {
   @media (max-width: 1240px) {
     background-image: linear-gradient(
       180deg,
-      rgba(255, 251, 242, 1) 14.2%,
-      rgba(255, 179, 65, 1) 14.2%
+      rgba(255, 251, 242, 1) 10rem,
+      rgba(255, 179, 65, 1) 10rem
     );
   }
 }
@@ -62,3 +81,11 @@ body {
   );
 }
 
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}

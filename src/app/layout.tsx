@@ -28,12 +28,12 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title:
-    "Ankora Health Tech | We provide  technical solutions for healthcare Facilities",
+  title: "Ankora Health Tech | We provide  technical solutions for healthcare Facilities",
   description: "We provide  technical solutions for healthcare Facilities",
 };
 
 const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
+
   return (
     <html lang="en">
       <body

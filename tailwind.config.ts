@@ -20,6 +20,9 @@ const config: Config = {
         sans: ["Nunito Sans", ...defaultTheme.fontFamily.sans],
         inter: ["Inter"]
       },
+      listStyleType: {
+        roman: "lower-roman"
+      },
       fontSize: {
         base: ["1rem", { lineHeight: "1.125rem" }],
         xl: ["1.25rem", { lineHeight: "1.875rem" }],

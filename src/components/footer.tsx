@@ -31,8 +31,8 @@ const links: Props[] = [
 
 const linkIcons: IconProps[] = [
   { href: `#`, icon: <FacebookIcon /> },
-  { href: `#`, icon: <XIcon /> },
-  { href: `#`, icon: <LinkedInIcon /> },
+  { href: `https://x.com/ankora_health?t=gkqZnpPEscdURsyHIfhKSw&s=31`, icon: <XIcon /> },
+  { href: `https://www.linkedin.com/company/ankora-health/`, icon: <LinkedInIcon /> },
   { href: `#`, icon: <InstagramIcon /> },
 ];
 

@@ -13,3 +13,4 @@ export * from "./reporting.svg";
 export * from "./inventory.svg";
 export * from "./staffAvailability.svg";
 export * from "./taskManagement.svg";
+export * from "./hex"
