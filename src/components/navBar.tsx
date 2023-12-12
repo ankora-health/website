@@ -1,10 +1,10 @@
 'use client'
 import { AnimatePresence, motion, useCycle } from "framer-motion";
-import { HexIcon, Logo } from "@/assets/svg";
+import {Logo } from "@/assets/svg";
 import Container from "./container";
 import Button from "./button";
 import NavLink from "./navLink";
-import { Menu } from "@/assets/svg/menu";
+import { Hamburger } from "./Hamburger";
 
 const links = [
   { href: `/about`, label: `About Us` },
@@ -76,12 +76,10 @@ const NavBar = () => {
         </div>
 
         {/* mobile menu button */}
-        <button
-          onClick={() => cycleOpen() as unknown as MouseEvent}
-          className="lg:hidden flex z-30"
-        >
-          {open ? <HexIcon /> : <Menu />}
-        </button>
+        <Hamburger 
+          toggle={cycleOpen}
+          open={open}
+        />
       </Container>
       {/* mobile menu button */}
 

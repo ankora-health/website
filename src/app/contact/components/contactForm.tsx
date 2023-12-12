@@ -1,14 +1,14 @@
 import Button from "@/components/button";
 import { Input } from "@/components/input";
 import { TextArea } from "@/components/textArea";
-import { inter800 } from "@/styles/fonts";
+import { nunito800 } from "@/styles/fonts";
 
 const ContactForm = () => {
   return (
     <form className="flex desktop:p-[2.5rem] p-[1.56rem] bg-white rounded-[1.5626rem]">
       <fieldset className="flex flex-col desktop:gap-[1.88rem] gap-5 w-full">
         <h3
-          className={`${inter800.className} leading-[2.875rem] text-2xl desktop:text-[2.3125rem]`}
+          className={`${nunito800.className} leading-[2.875rem] text-2xl desktop:text-[2.3125rem]`}
         >
           Contact Us
         </h3>

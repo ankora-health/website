@@ -13,12 +13,14 @@ const config: Config = {
     screens: {
       mobile: "390px",
       desktop: "1240px",
-      ...defaultTheme.screens
+      xl: "1240px",
+      md: defaultTheme.screens.md,
+      sm: defaultTheme.screens.sm,
+      lg: defaultTheme.screens.lg
     },
     extend: {
       fontFamily: {
-        sans: ["Nunito Sans", ...defaultTheme.fontFamily.sans],
-        inter: ["Inter"]
+        sans: ["Nunito", ...defaultTheme.fontFamily.sans]
       },
       listStyleType: {
         roman: "lower-roman"

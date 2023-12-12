@@ -5,9 +5,7 @@ import {
   nunito500,
   nunito600,
   nunito700,
-  nunito_sans400,
-  nunito_sans700,
-  nunito_sans800,
+  nunito800
 } from "@/styles/fonts";
 import Image from "next/image";
 import landing_page1 from "@/assets/images/landing_page1.png";
@@ -165,7 +163,7 @@ const Index = () => {
         <Container className="flex w-[100%] mx-auto destop:pb-[8.56rem]">
           <section className="flex w-[100%] pt-[3.5rem] desktop:pt-[3.88rem] items-center gap-[2.31rem] desktop:gap-10 flex-col desktop:flex-row">
             <div className="flex flex-col w-[100%] gap-[1.12rem] desktop:gap-[1.56rem]">
-              <h1 className={`${nunito_sans800.className} text-4xl desktop:text-[3.625rem] leading-[2.625rem] desktop:leading-[4.25rem] text-grey-900 desktop:min-w-[19ch] desktop:max-w-[19ch]`}>
+              <h1 className={`${nunito800.className} text-4xl desktop:text-[3.625rem] leading-[2.625rem] desktop:leading-[4.25rem] text-grey-900 desktop:min-w-[19ch] desktop:max-w-[19ch]`}>
                 Explore the possibilities of a redefined healthcare experience.
               </h1>
               <p className={`${nunito500.className} text-lg desktop:text-xl leading-[1.75rem] text-grey-700 desktop:min-w-[47ch] desktop:max-w-[47ch]`}>
@@ -192,7 +190,7 @@ const Index = () => {
       </div>
       <Container className="flex flex-col w-[100%] pt-[4.94rem] mx-auto gap-[3.75rem]">
         <div className="flex flex-col gap-[0.31rem] w-[100%] justify-center items-center">
-          <h2 className={`${nunito_sans700.className} text-grey-900 leading-normal text-[1.625rem] desktop:text-[2.375rem] text-center w-10/12`}>
+          <h2 className={`${nunito700.className} text-grey-900 leading-normal text-[1.625rem] desktop:text-[2.375rem] text-center w-10/12`}>
             Easy Healthcare Unification
           </h2>
           <p
@@ -228,7 +226,7 @@ const Index = () => {
                 WHY CHOOSE US
               </h4>
               <h5
-                className={`${nunito_sans400.className} desktop:text-[2.375rem] text-[1.625rem] leading-normal desktop:leading-[2.875rem] text-accent-25 max-w-[30ch]`}
+                className={`${nunito400.className} desktop:text-[2.375rem] text-[1.625rem] leading-normal desktop:leading-[2.875rem] text-accent-25 max-w-[30ch]`}
               >
                 Ankora enables data-driven quality improvement initiatives.
               </h5>

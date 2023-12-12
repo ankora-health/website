@@ -4,7 +4,7 @@ import Container from "@/components/container";
 import NavLink from "@/components/navLink";
 import useHash from "@/hooks/useHash";
 import useMediaQuery from "@/hooks/useMediaQuery";
-import { inter800, nunito600, nunito_sans400, nunito_sans700 } from "@/styles/fonts";
+import { nunito800, nunito600, nunito400, nunito700 } from "@/styles/fonts";
 import { articles } from "./articles";
 
 
@@ -16,7 +16,7 @@ const Index = () => {
   return (
     <Container className="flex flex-col w-[100%] pt-[3.5rem] desktop:pt-[7.81rem] mx-[auto]">
       <h1
-        className={`${desktop ? inter800.className : nunito_sans700.className} text-4xl desktop:text-[3.625rem] leading-[2.625rem] desktop:leading-[4.25rem] text-grey-900 desktop:pb-[3.06rem]`}
+        className={`${desktop ? nunito800.className : nunito700.className} text-4xl desktop:text-[3.625rem] leading-[2.625rem] desktop:leading-[4.25rem] text-grey-900 desktop:pb-[3.06rem]`}
       >
         Privacy Policy
       </h1>
@@ -38,7 +38,7 @@ const Index = () => {
                   <li key={idx}>
                     <NavLink
                       onClick={() => setHash(href)}
-                      className={`${nunito_sans400.className} ${isActive ? activeStyles : ""
+                      className={`${nunito400.className} ${isActive ? activeStyles : ""
                       } flex leading-[1.875rem] text-grey-900 text-xl px-[0.5rem] py-[0.625rem] w-full`}
                       href={href}
                     >
@@ -58,12 +58,12 @@ const Index = () => {
                   className="flex flex-col text-justify gap-[0.94rem]"
                 >
                   <h3
-                    className={`text-grey-900 text-[1.75rem] desktop:text-[2rem] ${nunito600.className} desktop:leading-[2.40625rem]`}
+                    className={`text-grey-900 text-[1.75rem] text-left desktop:text-[2rem] ${nunito600.className} desktop:leading-[2.40625rem]`}
                   >
                     {`${idx + 1}. ${label}`}
                   </h3>
                   <p
-                    className={`${nunito_sans400.className} text-grey-700 text-base leading-[1.5rem] desktop:text-xl desktop:leading-[2.04625rem] [&>li]:list-roman`}
+                    className={`${nunito400.className} text-grey-700 text-base leading-[1.5rem] desktop:text-xl desktop:leading-[2.04625rem] [&>li]:list-roman`}
                   >
                     {parse(content)}
                   </p>

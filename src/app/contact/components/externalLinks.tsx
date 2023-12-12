@@ -1,5 +1,5 @@
 import React from "react";
-import { nunito_sans400 } from "@/styles/fonts";
+import { nunito400 } from "@/styles/fonts";
 
 interface ExternalLinkProps {
   icon: React.ReactElement;
@@ -20,13 +20,13 @@ export const ExternalLinks: React.FC<ExternalLinkProps> = ({
       {link && text && (
         <a
           href={link}
-          className={`${nunito_sans400.className} text-xl text-grey-900`}
+          className={`${nunito400.className} text-xl text-grey-900`}
         >
           {text}
         </a>
       )}
       {text && !link && (
-        <span className={`${nunito_sans400.className} text-xl text-grey-900`}>
+        <span className={`${nunito400.className} text-xl text-grey-900`}>
           {text}
         </span>
       )}
