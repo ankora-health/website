@@ -10,7 +10,9 @@ interface HashProps {
   handleScroll: (value: string) => void
 }
 
-const useHash = (): HashProps => {
+
+
+const useHash = (containerId?: string): HashProps => {
   const router = useRouter();
   const [hash, setHash] = useState<string>("");
 
@@ -20,14 +22,19 @@ const useHash = (): HashProps => {
       scroller.scrollTo(hashValue.substring(1), {
         duration: 500,
         smooth: true,
-        containerId: "containerElement",
+        containerId
       })
       setHash(hashValue);
     }
-  }, []);
+  }, [containerId]);
 
   const handleScroll = (href: string) => {
     router.push(href, { scroll: false } )
+    scroller.scrollTo(href.substring(1), {
+      duration: 500,
+      smooth: true,
+      containerId
+    })
     setHash(href)
   }
 
