@@ -9,7 +9,7 @@ interface Props {
 
 export const Hamburger: React.FC<Props> = ({ toggle, open }) => (
   <button 
-    className="lg:hidden flex z-30 btn bg-transparent"
+    className="lg:hidden flex z-30 btn bg-transparent p-0"
     onClick={toggle}
   >
     <svg width="23" height="18" viewBox="0 0 23 18">

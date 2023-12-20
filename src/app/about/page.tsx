@@ -1,13 +1,10 @@
 import Container from "@/components/container";
 import { nunito400, nunito800 } from "@/styles/fonts";
-import about_us1 from "@/assets/images/about_us1.png";
-import about_us2 from "@/assets/images/about_us2.png";
-import about_us3 from "@/assets/images/about_us3.png";
 import Image from "next/image";
 import Button from "@/components/button";
+import { about_us } from "../../../images";
 
 const Index = () => {
-  const images = [about_us1, about_us2, about_us3];
 
   return (
     <div className="w-screen flex flex-col gap-[4.31rem]">
@@ -33,25 +30,24 @@ const Index = () => {
               burdens were impeding the delivery of quality healthcare.
             </p>
           </section>
-          <section className="flex w-full justify-end gap-8">
-            {images.map((image, index) => {
+          <section className="flex justify-between self-center desktop:self-end gap-3 desktop:gap-8 h-auto desktop:h-[312px] max-w-full desktop:max-w-[1081px]">
+            {about_us.map(({ url, title, height, width}, index) => {
               return (
                 <Image
                   key={index}
-                  src={image}
-                  className="rounded-[0.9375rem] w-[6rem] desktop:w-[339px] desktop:h-[312px]"
-                  width={339}
-                  height={312}
-                  alt={`about_us_picture_${index}`}
-                  placeholder="blur"
+                  src={url}
+                  className="rounded-[0.9375rem] desktop:flex-1 w-[31%]"
+                  width={width}
+                  height={height}
+                  alt={title}
                 />
               );
             })}
           </section>
         </Container>
       </div>
-      <Container className="mx-auto">
-        <div className="py-10 px-[1.94rem] desktop:p-[4.3rem] bg-grey-900 mx-auto rounded-[0.9375rem] mb-[4.31rem] flex items-start desktop:items-center justify-between flex-col desktop:flex-row gap-5">
+      <Container className="desktop:mx-auto">
+        <div className="py-10 px-[1.94rem] desktop:p-[4.3rem] bg-grey-900 desktop:mx-auto rounded-[0.9375rem] mb-[4.31rem] flex items-start desktop:items-center justify-between flex-col desktop:flex-row gap-5">
           <div className="flex flex-col gap-[0.63rem]">
             <h2
               className={`${nunito800.className} text-[1.75rem] leading-normal desktop:text-[2.375rem] desktop:leading-[4.25rem] text-accent-23`}
@@ -59,13 +55,17 @@ const Index = () => {
               Our Mission
             </h2>
             <p
-              className={`${nunito400.className} text-accent-25 text-base desktop:text-xl desktop:min-w-[49ch] desktop:max-w-[49ch]`}
+              className={`${nunito400.className} text-accent-25 text-base desktop:text-xl desktop:min-w-[49ch] desktop:max-w-[49ch] leading-[normal] desktop:leading-[30px]`}
             >
               To make healthcare more accessible, efficient, and personalised for
               both the patients and healthcare stakeholders in Africa
             </p>
           </div>
-          <Button className="min-w-max">Get Started</Button>
+          <Button className="min-w-max">
+            <a target="_blank" href="https://calendly.com/ankora-support/30min">
+              Get Started
+            </a>
+          </Button>
         </div>
       </Container>
     </div>

@@ -24,7 +24,7 @@ const Accordion: React.FC<AccordionProps> = ({ id, title, children }) => {
           </h2>
 
           <article
-            className={`${nunito400.className} hidden desktop:flex opacity-0 max-h-0 bg-white transition-all duration-[0.2s] text-xl text-grey-900 text-justify leading-[1.875rem] px-12`}
+            className={`${nunito400.className} hidden desktop:flex opacity-0 max-h-0 bg-white transition-all duration-[0.2s] text-xl text-grey-900 leading-[1.875rem] px-12`}
           >
             {children}
           </article>
@@ -34,7 +34,7 @@ const Accordion: React.FC<AccordionProps> = ({ id, title, children }) => {
           </div>
         </section>
         <article
-          className={`${nunito400.className} flex desktop:hidden opacity-0 max-h-0 bg-white transition-all duration-[0.2s] text-xl text-grey-900 text-justify leading-[1.875rem]`}
+          className={`${nunito400.className} flex desktop:hidden opacity-0 max-h-0 bg-white transition-all duration-[0.2s] text-xl text-grey-900 leading-[1.875rem]`}
         >
           {children}
         </article>

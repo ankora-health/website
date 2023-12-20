@@ -100,13 +100,13 @@ export const terms = [
     label:"Prohibited use of the website",
     content: `
       <p>By using the website, you agree that you will not:</p>
-        <li>use any of the Services in violation of these Terms;</li>
-        <li>copy, modify, create a derivative work from, reverse engineer or reverse assemble the website, the App function,
+        <li>Use any of the Services in violation of these Terms;</li>
+        <li>Copy, modify, create a derivative work from, reverse engineer or reverse assemble the website, the App function,
           or otherwise attempt to discover any source code, or allow any third party to do so;</li>
-        <li>use, display, mirror or frame the Content, or any individual element within the Ankora’s website, the Ankora’s
+        <li>Use, display, mirror or frame the Content, or any individual element within the Ankora’s website, the Ankora’s
           name, any trademark, logo or other proprietary information belonging to the Ankora, or the layout and design of any
           page or form contained on a page in the website, without the Ankora’s express written consent;</li>
-        <li>dilute, tarnish or otherwise harm the Company’s brand in any way, including through unauthorized use of our
+        <li>Dilute, tarnish or otherwise harm the Company’s brand in any way, including through unauthorized use of our
           Content, registering and/or using “Ankora Health Limited” name or derivative terms in domain names, trade names,
           trademarks or other source identifiers, or registering and/or using domains names, trade names, trademarks or other
           source identifiers that closely imitate or are confusingly similar to the Company’s domains, trademarks, taglines,
@@ -142,8 +142,8 @@ export const terms = [
       <p>YOUR SOLE REMEDY AGAINST THE COMPANY FOR DISSATISFACTION WITH THE SERVICES IS TO STOP USING ANY OR ALL OF THE
         AFFECTED SERVICES.</p>
       <p>Without prejudice to the foregoing provisions, your use of our site and services is at your own risk. You agree that
-        Ankora will in no way be liable for (a) any direct, indirect, special, incidental punitive, consequential, punitive,
-        special or exemplary damages or (b) any damages whatsoever in excess of the amount of the transaction or (including,
+        Ankora will in no way be liable for <br />(a) Any direct, indirect, special, incidental punitive, consequential, punitive,
+        special or exemplary damages or <br />(b) Any damages whatsoever in excess of the amount of the transaction or (including,
         without limitation, those damages resulting from revenue loss of revenues, lost profits, profit loss of, use, data,
         goodwill, loss of use , business interruption, or any other intangible losses), (whether the Company has been advised
         of the possibility of such damages or not) arising out of or in connection with the Company’s website or services

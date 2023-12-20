@@ -5,8 +5,8 @@ import { ExternalLinks } from "./components/externalLinks";
 import { EmailIcon } from "@/assets/svg/email";
 import { DeviceIcon } from "@/assets/svg/device";
 import { LocationIcon } from "@/assets/svg/location";
-import ContactForm from "./components/contactForm";
 import useMediaQuery from "@/hooks/useMediaQuery";
+import Calendly from "./components/calendly";
 
 const Index = () => {
   const desktop = useMediaQuery('(min-width: 1240px)');
@@ -43,7 +43,7 @@ const Index = () => {
           </div>
         </section>
         <section className="flex flex-col w-full">
-          <ContactForm />
+          <Calendly />
         </section>
       </Container>
     </div>

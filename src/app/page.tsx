@@ -8,7 +8,6 @@ import {
   nunito800
 } from "@/styles/fonts";
 import Image from "next/image";
-import landing_page1 from "@/assets/images/landing_page1.png";
 import patientJourney from "@/assets/svg/patientJourney.svg";
 import patientRecord from "@/assets/svg/patientRecord.svg";
 import operationalAnalysis from "@/assets/svg/operationalAnalysis.svg";
@@ -19,6 +18,7 @@ import staffAvailability from "@/assets/svg/staffAvailability.svg";
 import taskManagement from "@/assets/svg/taskManagement.svg";
 import Button from "@/components/button";
 import { CheckCircleIcon } from "@/assets/svg";
+import { landingPage } from "../../images";
 
 interface CardProps {
   title: string;
@@ -39,11 +39,11 @@ const imageCardContent = [
     text: `Simplified patient visit flow`,
   },
   {
-    title: "Easy and Unified record for all patients",
+    title: `Digitised Patient Record`,
     height: 216,
     width: 384,
     img: patientRecord,
-    text: `Digitised Patient Record`,
+    text: "Easy and Unified record for all patients",
   },
   {
     title: "Robost Reporting Systems",
@@ -81,11 +81,11 @@ const imageCardContent = [
     text: `Easy hospital bill & HMO management`,
   },
   {
-    title: "Efficient Task Management System",
+    title: "Task Management System",
     height: 192,
     width: 408,
     img: taskManagement,
-    text: `Task allocation for hospital staffs`,
+    text: `Efficient Task allocation for hospital staffs`,
   },
 ];
 
@@ -160,8 +160,8 @@ const Index = () => {
   return (
     <div className="flex w-screen h-max flex-col mb-[2.5rem] bg-white">
       <div className="w-screen landing-page-background-gradient">
-        <Container className="flex w-[100%] mx-auto destop:pb-[8.56rem]">
-          <section className="flex w-[100%] pt-[3.5rem] desktop:pt-[3.88rem] items-center gap-[2.31rem] desktop:gap-10 flex-col desktop:flex-row">
+        <Container className="flex w-full desktop:mx-auto destop:pb-[8.56rem]">
+          <section className="flex w-full pt-[3.5rem] desktop:pt-[3.88rem] items-center gap-[2.31rem] desktop:gap-10 flex-col desktop:flex-row">
             <div className="flex flex-col w-[100%] gap-[1.12rem] desktop:gap-[1.56rem]">
               <h1 className={`${nunito800.className} text-4xl desktop:text-[3.625rem] leading-[2.625rem] desktop:leading-[4.25rem] text-grey-900 desktop:min-w-[19ch] desktop:max-w-[19ch]`}>
                 Explore the possibilities of a redefined healthcare experience.
@@ -171,24 +171,23 @@ const Index = () => {
                 the power of technology. Ankora is your partner in transforming
                 the way you deliver healthcare services
               </p>
-              <Button>Get Started</Button>
+              <Button>
+                <a target="_blank" href="https://calendly.com/ankora-support/30min">
+                  Get Started
+                </a>
+              </Button>
             </div>
             <Image
-              src={landing_page1}
-              width={853}
-              height={533}
+              src={landingPage.url}
+              width={landingPage.width}
+              height={landingPage.height}
               priority
-              style={{
-                height: "auto",
-                objectFit: "cover",
-              }}
-              alt="landing_page1"
-              placeholder="blur"
+              alt={landingPage.title}
             />
           </section>
         </Container>
       </div>
-      <Container className="flex flex-col w-[100%] pt-[4.94rem] mx-auto gap-[3.75rem]">
+      <Container className="flex flex-col w-full pt-[4.94rem] mx-auto gap-[3.75rem]">
         <div className="flex flex-col gap-[0.31rem] w-[100%] justify-center items-center">
           <h2 className={`${nunito700.className} text-grey-900 leading-normal text-[1.625rem] desktop:text-[2.375rem] text-center w-10/12`}>
             Easy Healthcare Unification

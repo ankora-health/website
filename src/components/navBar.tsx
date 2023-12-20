@@ -9,7 +9,7 @@ import { Hamburger } from "./Hamburger";
 const links = [
   { href: `/about`, label: `About Us` },
   { href: `/#features`, label: `Features` },
-  { href: `/faqs`, label: `FAQ's` },
+  { href: `/faqs`, label: `FAQs` },
   { href: `/contact`, label: `Contact Us` },
   { href: `https://app.ankora.health`, label: `Sign In` },
   { href: `#`, label: `Book a Demo` },
@@ -43,7 +43,7 @@ const NavBar = () => {
 
   return (
     <nav className="w-screen backdrop-blur-[6px] flex justify-center shadow-[2px_2px_6px_1px_rgba(28,27,27,0.06)] pt-[1.25rem] pb-[0.94rem] bg-[rgba(255,_251,_242,_0.95)] sticky top-0 z-20">
-      <Container className="flex justify-between items-center mx-auto gap-16">
+      <Container className="flex justify-between items-center desktop:mx-auto gap-16 w-full">
         <NavLink className="[&>svg]:w-[5.375rem] desktop:[&>svg]:w-[7.25rem] [&>svg]:h-[2.735rem]" href="/"> 
           <Logo />
         </NavLink>
@@ -69,7 +69,7 @@ const NavBar = () => {
                 key={idx}
                 variant={label === links[4].label ? 'outline' : 'solid'}
               >
-                <a href={href}>{label}</a>
+                <a target="_blank" href={href}>{label}</a>
               </Button>
             )
           })}
@@ -135,7 +135,7 @@ const NavBar = () => {
                       variant={label === links[4].label ? 'outline' : 'solid'}
                       onClick={() => cycleOpen() as unknown as MouseEvent}
                     >
-                      <a href={href}>{label}</a>
+                      <a target="_blank" href={href}>{label}</a>
                     </Button>
                   </motion.li>
                 )

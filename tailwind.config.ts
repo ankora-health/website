@@ -19,6 +19,9 @@ const config: Config = {
       lg: defaultTheme.screens.lg
     },
     extend: {
+      width: {
+        container: "1440px"
+      },
       fontFamily: {
         sans: ["Nunito", ...defaultTheme.fontFamily.sans]
       },

@@ -1,16 +1,16 @@
 "use client";
 import parse from 'html-react-parser';
 import Container from "@/components/container";
-import NavLink from "@/components/navLink";
-import useHash from "@/hooks/useHash";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { nunito800, nunito600, nunito400, nunito700 } from "@/styles/fonts";
 import { articles } from "./articles";
+import { Link, Element } from 'react-scroll';
+import useHash from '@/hooks/useHash';
 
 
 
 const Index = () => {
-  const { hash, setHash } = useHash();
+  const { hash, handleScroll } = useHash()
   const desktop = useMediaQuery('(min-width: 1240px)');
 
   return (
@@ -31,43 +31,47 @@ const Index = () => {
           </h2>
           <ul className="flex flex-col gap-[0.44rem]">
             {articles.map(({ href, label }, idx) => {
-                const isActive = href === hash;
-                const activeStyles = "bg-accent-25 rounded-lg";
+              const isActive = href === hash;
+              const activeStyles = "bg-accent-25 rounded-lg";
 
-                return (
-                  <li key={idx}>
-                    <NavLink
-                      onClick={() => setHash(href)}
-                      className={`${nunito400.className} ${isActive ? activeStyles : ""
-                      } flex leading-[1.875rem] text-grey-900 text-xl px-[0.5rem] py-[0.625rem] w-full`}
-                      href={href}
-                    >
-                      {label}
-                    </NavLink>
-                  </li>
-                );
-              })}
+              return (
+                <li key={idx}>
+                  <Link 
+                    to={href.substring(1)} 
+                    containerId="containerElement"
+                    smooth={true} 
+                    offset={5}
+                    activeClass={activeStyles}
+                    className={`${nunito400.className} ${isActive ? activeStyles : ""} flex leading-[1.875rem] text-grey-900 text-xl px-[0.5rem] py-[0.625rem] w-full`} 
+                    duration={500}
+                    onClick={() => handleScroll(href)}
+                  >
+                    {label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </div>
-        <div className="flex flex-col gap-[3.06rem] desktop:max-h-[48rem] desktop:overflow-y-auto desktop:no-scrollbar">
+        <div id="containerElement" className="flex flex-col gap-[3.06rem] desktop:max-h-[48rem] desktop:overflow-y-auto desktop:no-scrollbar">
           {articles.map(({ href, label, content }, idx) => {
               return (
-                <article
+                <Element
                   key={idx}
-                  id={href.substring(1)}
+                  name={href.substring(1)}
                   className="flex flex-col text-justify gap-[0.94rem]"
                 >
                   <h3
-                    className={`text-grey-900 text-[1.75rem] text-left desktop:text-[2rem] ${nunito600.className} desktop:leading-[2.40625rem]`}
+                    className={`text-grey-900 text-2xl text-left ${nunito600.className} desktop:leading-[2.40625rem]`}
                   >
                     {`${idx + 1}. ${label}`}
                   </h3>
                   <p
-                    className={`${nunito400.className} text-grey-700 text-base leading-[1.5rem] desktop:text-xl desktop:leading-[2.04625rem] [&>li]:list-roman`}
+                    className={`${nunito400.className} text-grey-700 text-base leading-[1.5rem] desktop:leading-[2.04625rem] [&>li]:list-roman`}
                   >
                     {parse(content)}
                   </p>
-                </article>
+                </Element>
               );
             })}
             <b>Last updated October 2023</b>

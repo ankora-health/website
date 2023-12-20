@@ -3,7 +3,12 @@ import Container from "./container";
 import Button from "./button";
 import NavLink from "./navLink";
 import { nunito400, nunito600, nunito700 } from "@/styles/fonts";
-import { FacebookIcon, InstagramIcon, LinkedInIcon, XIcon } from "@/assets/svg";
+import { 
+  // FacebookIcon, 
+  // InstagramIcon, 
+  LinkedInIcon, 
+  XIcon 
+} from "@/assets/svg";
 
 interface Props {
   href: string;
@@ -30,10 +35,10 @@ const links: Props[] = [
 ];
 
 const linkIcons: IconProps[] = [
-  { href: `#`, icon: <FacebookIcon /> },
+  // { href: `#`, icon: <FacebookIcon /> },
   { href: `https://x.com/ankora_health?t=gkqZnpPEscdURsyHIfhKSw&s=31`, icon: <XIcon /> },
   { href: `https://www.linkedin.com/company/ankora-health/`, icon: <LinkedInIcon /> },
-  { href: `#`, icon: <InstagramIcon /> },
+  // { href: `#`, icon: <InstagramIcon /> },
 ];
 
 const Navigation: React.FC<NavigationProps> = ({ links, title }) => {
@@ -64,8 +69,8 @@ const Footer = () => {
   const year = date.getFullYear();
 
   return (
-    <Container className="flex justify-between items-center">
-      <footer className="w-screen flex justify-between flex-col px-5 desktop:px-[3.12rem] desktop:pt-[3.56rem] pt-[3.38rem] pb-[0.62rem] bg-footer rounded-[1.5625rem]">
+    <footer className="flex justify-center w-screen px-5 desktop:px-0">
+      <Container className="flex justify-between flex-col px-5 desktop:px-[3.12rem] desktop:pt-[3.56rem] pt-[3.38rem] pb-[0.62rem] bg-footer rounded-[1.5625rem] w-full">
         <div className="flex justify-between w-full flex-col desktop:flex-row ">
           <div className="flex desktop:max-w-[50ch] max-w-full flex-col desktop:mb-[6.125rem] mb-[2.06rem]">
             <p
@@ -80,7 +85,9 @@ const Footer = () => {
               experience for Patients and Caregivers
             </span>
             <Button className="desktop:text-xl w-max">
-              Get Started
+              <a target="_blank" href="https://calendly.com/ankora-support/30min">
+                Get Started
+              </a>
             </Button>
           </div>
  
@@ -108,7 +115,7 @@ const Footer = () => {
             <p
               className={`${nunito400.className} text-sm text-grey-700 leading-[1.875rem]`}
             >
-              &copy; {year} Ankora Health Technologies Inc. All rights reserved.
+              &copy; {year} Ankora Health Limited. All rights reserved.
             </p>
           </div>
           <div className="flex gap-[0.62rem]">
@@ -126,8 +133,8 @@ const Footer = () => {
               })}
           </div>
         </div>
-      </footer>
-    </Container>
+      </Container>
+    </footer>
   );
 };
 

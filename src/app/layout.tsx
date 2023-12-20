@@ -16,7 +16,7 @@ const nunito = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "Ankora Health Tech | We provide  technical solutions for healthcare Facilities",
+  title: "Ankora Health | We provide  technical solutions for healthcare Facilities",
   description: "We provide  technical solutions for healthcare Facilities",
 };
 
@@ -25,7 +25,7 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
     <html lang="en">
       <body
-        className={`flex flex-col items-center justify-between w-screen pb-[2.88rem] overflow-x-hidden ${nunito.variable}`}
+        className={`flex flex-col items-center justify-between w-screen pb-[2.88rem] overflow-x-clip max-w-[1440px] desktop:mx-auto ${nunito.variable}`}
       >
         <NavBar />
         <main className="w-[inherit] relative">{children}</main>

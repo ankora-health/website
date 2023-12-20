@@ -7,11 +7,16 @@ export const articles = [
   { 
     href: "#information_we_collect", 
     label: "Information we collect",
-    content: `When you use our Platform, we may collect certain types of information aboutyou including the following: Information you provide to us We collect personal information about prospective clients and their beneficialowners or controllers as part of business development initiatives and ourbusiness acceptance process. This includes but is not limited to your personaldata (such as your full name, nationality, phone number(s), email address, dateof birth, home or office addresses, and location.Information collected automaticallyThis includes but is not limited to your IP address, browser type, mobile deviceID, device type, operating system version, connection information, mobilenetwork information, location derived from GPS-enabled services, informationbased on your usage of the service such as time, date and duration of your use,referral URLs, search terms and search history, browsing history andadvertisement interactions.Information we obtain from 3rd PartiesWe may retrieve additional personal information about you from third partiesand other identification/verification services such as your financial institution andpayment processor. With your consent, we may also collect additional PersonalInformation in other ways including emails, surveys, and other forms ofcommunication. We will not share or disclose your Personal Information with a
-    third party without your consent except as may be required for the purpose ofproviding you with our services or under applicable legislation.In providing you with our services, we may rely on third-party servers located inforeign jurisdictions from time to time, which as a result, may require thetransfer or maintenance of your personally identifiable information on computersor servers in foreign jurisdictions. We will endeavour to ensure that such foreignjurisdictions have data protection legislation that is no less than the existing dataprotection regulations in force in Nigeria and your personally identifiableinformation is treated in a safe and secure manner.`
+    content: `When you use our Platform, we may collect certain types of information aboutyou including the following: <li>Information you provide to us We collect personal information about prospective clients and their beneficial owners or controllers as part of business development initiatives and ourbusiness acceptance process. <br />
+    This includes but is not limited to your personal data (such as your full name, nationality, phone number(s), email address, dateof birth, home or office addresses, and location. </li>
+    <li>Information collected automatically <br />
+    This includes but is not limited to your IP address, browser type, mobile deviceID, device type, operating system version, connection information, mobile network information, location derived from GPS-enabled services, information based on your usage of the service such as time, date and duration of your use, referral URLs, search terms and search history, browsing history and advertisement interactions.</li>
+    <li>Information we obtain from 3rd Parties <br />
+    We may retrieve additional personal information about you from third partiesand other identification/verification services such as your financial institution and payment processor. With your consent, we may also collect additional PersonalInformation in other ways including emails, surveys, and other forms of communication. We will not share or disclose your Personal Information with a
+    third party without your consent except as may be required for the purpose of providing you with our services or under applicable legislation. In providing you with our services, we may rely on third-party servers located inforeign jurisdictions from time to time, which as a result, may require thetransfer or maintenance of your personally identifiable information on computersor servers in foreign jurisdictions. We will endeavour to ensure that such foreign jurisdictions have data protection legislation that is no less than the existing dataprotection regulations in force in Nigeria and your personally identifiableinformation is treated in a safe and secure manner.</li>`
   },
   { 
-    href: "#why_we_collect_yourInformation", 
+    href: "#why_we_collect_your_Information", 
     label: "Why we collect your Information",
     content: `We collect your information to ensure your easy and seamless access to ourservices. We use the information we collect for the following purposes:
       <li>To enable us to provide you with a personalized experience of ourproduct and services.</li>
@@ -40,14 +45,14 @@ export const articles = [
     href: "#governing_principles_of_data_processing", 
     label: "Governing Principles of Data Processing",
     content: `We process your information in accordance with the provisions of the Nigeria Data Protection Regulation (NDPR) and these principles:
-      <li>Your personal data is collected and processed in accordance withspecific, legitimate and lawful purpose consented to by you, providedthat further processing may be done by archiving the data for publicinterest, scientific or research purposes, or statistical purposes.</li>
-      <li>The data collected is adequate, accurate and without prejudice to thedignity of the human person.</li>
-      <li>The data collected is stored only for the period within which it isreasonably needed.</li>
-      <li>The data collected is secured against all foreseeable hazards andbreaches such as theft, cyberattack, viral attack, dissemination,manipulations of any kind, damage by rain, fire or exposure to othernatural elements</li>
+      <li>Your personal data is collected and processed in accordance withspecific, legitimate and lawful purpose consented to by you, providedthat further processing may be done by archiving the data for public interest, scientific or research purposes, or statistical purposes.</li>
+      <li>The data collected is adequate, accurate and without prejudice to the dignity of the human person.</li>
+      <li>The data collected is stored only for the period within which it is reasonably needed.</li>
+      <li>The data collected is secured against all foreseeable hazards andbreaches such as theft, cyber attack, viral attack, dissemination, manipulations of any kind, damage by rain, fire or exposure to other natural elements</li>
       <li>We owe a duty of care to you in respect of the data we have obtained from you.</li>`
   },
   { 
-    href: "#data-Security_and_protection", 
+    href: "#data_Security_and_protection", 
     label: "Data Security and Protection",
     content: `To prevent unauthorised access and maintain security against foreseeable hazards, we have in place physical, electronic and managerial procedures to protect, secure and safeguard our customer’s data and ensure accuracy of our records. 
     <li>We use secure socket layer (SSL) protocol technology for the collection and any permitted transfers of your data. However, the Company cannot guarantee the security of any personal data disclosed to it or collected by it to the extent that it has no control over the public or third-party network through which personal data may be sent to our website.</li>	
@@ -64,10 +69,10 @@ export const articles = [
     href: "#your_privacy_rights", 
     label: "Your Privacy Rights",
     content: `By providing us with your personal information, you have certain rights in accordance with the provisions of the Nigeria Data Protection Regulation which include <br/>
-    -	the right to request for your personal data in our possession, <br/>
-    -	the right to object to the processing of your personal data, <br/>
-    -	the right to request rectification and modification of Personal Information which we keep; and <br/> 
-    -	the right to request for the deletion of your personal data in our possession. <br/>
+    -	The right to request for your personal data in our possession, <br/>
+    -	The right to object to the processing of your personal data, <br/>
+    -	The right to request rectification and modification of Personal Information which we keep; and <br/> 
+    -	The right to request for the deletion of your personal data in our possession. <br/>
     To exercise any of the rights listed here, please contact us through the details provided below. 
     All such requests will be reviewed and considered in accordance with the provisions of the applicable data protection regulations.
     You also have the right to opt-out of receiving the informative materials we send to our users by clicking the “Unsubscribe” button found at the bottom of such emails. You also have the right to decline to provide your personal Information when it is requested, however, certain services or all the services may be unavailable to you.
@@ -84,10 +89,10 @@ export const articles = [
     content: `We may retain Personal Information about the User, as long as it is necessary for business and/or legal purposes. Also, we may retain aggregated anonymous information indefinitely. In addition, we may retain your information for an additional period as is permitted or required to, among other things, comply with our legal obligations, resolve disputes, and enforce agreements.
     All Personal Information shall be destroyed by the Company where possible. For all Personal Data and records obtained, used and stored by the Company, we shall perform periodical reviews of the data retained to confirm the accuracy, purpose, validity and requirement to retain.
     The length of storage of Personal Information shall, amongst other things, be determined by:<br/>
-    -	the contract terms agreed between the Company and the Data Subject or as long as it is needed for the purpose for which it was obtained; or <br/>
-    -	whether the transaction or relationship has statutory implication or a required retention period; or <br/>
-    -	whether there is an express request for deletion of Personal Data by the Data Subject, provided that such request will only be treated where the Data Subject is not under any investigation which may require the Company to retain such Personal Data or there is no subsisting contractual arrangement with the Data Subject that would require the processing of the Personal Data; or <br/>
-    -	whether the Company has another lawful basis for retaining that information beyond the period for which it is necessary to serve the original purpose.` 
+    -	The contract terms agreed between the Company and the Data Subject or as long as it is needed for the purpose for which it was obtained; or <br/>
+    -	Whether the transaction or relationship has statutory implication or a required retention period; or <br/>
+    -	Whether there is an express request for deletion of Personal Data by the Data Subject, provided that such request will only be treated where the Data Subject is not under any investigation which may require the Company to retain such Personal Data or there is no subsisting contractual arrangement with the Data Subject that would require the processing of the Personal Data; or <br/>
+    -	Whether the Company has another lawful basis for retaining that information beyond the period for which it is necessary to serve the original purpose.` 
   },
   { 
     href: "#contact_details", 
