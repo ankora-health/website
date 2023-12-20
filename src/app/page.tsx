@@ -183,6 +183,8 @@ const Index = () => {
               height={landingPage.height}
               priority
               alt={landingPage.title}
+              placeholder="blur"
+              blurDataURL={landingPage.blurData}
             />
           </section>
         </Container>

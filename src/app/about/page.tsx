@@ -31,7 +31,7 @@ const Index = () => {
             </p>
           </section>
           <section className="flex justify-between self-center desktop:self-end gap-3 desktop:gap-8 h-auto desktop:h-[312px] max-w-full desktop:max-w-[1081px]">
-            {about_us.map(({ url, title, height, width}, index) => {
+            {about_us.map(({ url, title, height, width, blurData }, index) => {
               return (
                 <Image
                   key={index}
@@ -40,6 +40,8 @@ const Index = () => {
                   width={width}
                   height={height}
                   alt={title}
+                  placeholder="blur"
+                  blurDataURL={blurData}
                 />
               );
             })}

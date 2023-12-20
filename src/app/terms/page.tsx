@@ -64,13 +64,10 @@ const Index = () => {
                 id={href.substring(1)}
                 className="flex flex-col text-justify gap-[0.94rem]"
               >
-                <h3
-                  className={`text-grey-900 text-[1.75rem] text-left desktop:text-[2rem] ${nunito600.className} desktop:leading-[2.40625rem]`}
-                >
+                <h3 className={`text-grey-900 text-2xl text-left ${nunito600.className} desktop:leading-[2.40625rem]`}>
                   {`${idx + 1}. ${label}`}
                 </h3>
-                <div
-                  className={`${nunito400.className} text-grey-700 text-base leading-[1.5rem] desktop:text-xl desktop:leading-[2.04625rem] [&>li]:list-disc [&>h6]:font-bold [&>h6]:pt-2`}
+                <div className={`${nunito400.className} text-grey-700 text-base leading-[1.5rem] desktop:text-xl desktop:leading-[2.04625rem] [&>li]:list-disc [&>h6]:font-bold [&>h6]:pt-2`}
                 >
                   {parse(content)}
                 </div>
