@@ -17,7 +17,7 @@ const nunito = Nunito({
 
 export const metadata: Metadata = {
   title: "Ankora Health | Connecting the healthcare dots",
-  description: "We provide  technical solutions for healthcare Facilities. Our commitment to innovation, accessibility, and data security drives us to continually enhance our services",
+  description: "We provide  technical solutions for healthcare Facilities. Our commitment to innovation, accessibility, and data security drives us to continually enhance our services.",
 };
 
 const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {

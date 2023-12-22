@@ -62,7 +62,8 @@ export const articles = [
     content: `To prevent unauthorised access and maintain security against foreseeable hazards, we have in place physical, electronic and managerial procedures to protect, secure and safeguard our customer’s data and ensure accuracy of our records. 
     <li>We use secure socket layer (SSL) protocol technology for the collection and any permitted transfers of your data. However, the Company cannot guarantee the security of any personal data disclosed to it or collected by it to the extent that it has no control over the public or third-party network through which personal data may be sent to our website.</li>	
     <li>We have a management and corporate commitment to information security within the organisation and provide clear direction, guidance and responsibilities and procedures in this respect.</li> 
-    We have in place a Data Protection Officer who deals with security of information and personal data together with relevant compliance with the Regulation and the knowledge and skills of our Data Protection Officer are continuously updated
+    <br />
+    We have in place a Data Protection Officer who deals with security of information and personal data together with relevant compliance with the Regulation and the knowledge and skills of our Data Protection Officer are continuously updated.
     ` 
   },
   { 
@@ -93,9 +94,9 @@ export const articles = [
     href: "#data_retention_period", 
     label: "Data Retention Period",
     content: `We may retain Personal Information about the User, as long as it is necessary for business and/or legal purposes. Also, we may retain aggregated anonymous information indefinitely. In addition, we may retain your information for an additional period as is permitted or required to, among other things, comply with our legal obligations, resolve disputes, and enforce agreements.
+    <br /><br />
     All Personal Information shall be destroyed by the Company where possible. For all Personal Data and records obtained, used and stored by the Company, we shall perform periodical reviews of the data retained to confirm the accuracy, purpose, validity and requirement to retain.
     The length of storage of Personal Information shall, amongst other things, be determined by:<br/> 
-    <br />
     -	The contract terms agreed between the Company and the Data Subject or as long as it is needed for the purpose for which it was obtained; or <br/> 
     <br />
     -	Whether the transaction or relationship has statutory implication or a required retention period; or <br/> 

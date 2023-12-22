@@ -4,10 +4,10 @@ export const terms = [
     label: "Terms of Use",
     content: `
       Throughout this Terms of Use, the following terms shall have the meanings ascribed herein: <br />
-      <li>“Ankora”, “we”, “us”, or “our” refers to Ankora Health Limited; </li><br />
-      <li>“You”, “customer”, and “user” refers to you, users of our Services and any entity or organization you or such users represent;</li><br />
-      <li>“Parties” refers to Ankora and the customer collectively and “Party” refers to Ankora or the Customer resoectively;</li><br />
-      <li>“Website” refers to [www.ankora.health.com] and its sub-domains, our mobile apps and services which incorporates this Terms of Use;</li> <br />
+      <li>“Ankora”, “we”, “us”, or “our” refers to Ankora Health Limited; </li>
+      <li>“You”, “customer”, and “user” refers to you, users of our Services and any entity or organization you or such users represent;</li>
+      <li>“Parties” refers to Ankora and the customer collectively and “Party” refers to Ankora or the Customer resoectively;</li>
+      <li>“Website” refers to [www.ankora.health.com] and its sub-domains, our mobile apps and services which incorporates this Terms of Use;</li> 
       <li>“Services” refers to products and services branded with the Ankora name, collectively, the Website, widgets, information, services, email notifications and other media, or portions of such media, through which you have accessed this Terms of Use.</li> <br />
       By using our website [www.ankora.health.com] and all related sites and/or services, you agree to these Terms of Use. The website Privacy Policy (where applicable) are incorporated by reference into these Terms of Use. <br />
       This Terms of Use is an agreement between you and <b>ANKORA HEALTH LIMITED</b> (‘The Company’). It details our obligations to you. It also highlights certain risks in using the services and you must consider such risks carefully as you will be bound by the provisions of this Agreement through your use of this website or any of our services.    
@@ -94,7 +94,7 @@ export const terms = [
     content: `
       Subject to your compliance with these Terms, Ankora grants you a limited, non-exclusive, non-sub licensable, revocable, non-transferable license to access and view any content made available on or through the Services and accessible to you, solely for the uses authorised by these Terms and any other Agreement incorporated into these Terms.<br /><br />
 
-      The Services, entire contents, features and functionality (including but not limited to all information, software, text, displays, image*s, video and audio, and the design, selection and arrangement thereof) on all our platforms and channels, are owned by Ankora, its licensors or other providers of such material and are protected by the laws of the Federal Republic of Nigeria and International copyright, trademark, patent, trade secret and other intellectual property or proprietary rights laws. The content/material may not be copied, modified, reproduced, downloaded or distributed in any way, in whole or in part, without the express prior written permission of Ankora, unless and except as is expressly provided in these Terms of Use. Any unauthorized use of the material is prohibited.<br /><br />
+      The Services, entire contents, features and functionality (including but not limited to all information, software, text, displays, images, video and audio, and the design, selection and arrangement thereof) on all our platforms and channels, are owned by Ankora, its licensors or other providers of such material and are protected by the laws of the Federal Republic of Nigeria and International copyright, trademark, patent, trade secret and other intellectual property or proprietary rights laws. The content/material may not be copied, modified, reproduced, downloaded or distributed in any way, in whole or in part, without the express prior written permission of Ankora, unless and except as is expressly provided in these Terms of Use. Any unauthorized use of the material is prohibited.<br /><br />
       You may use the website solely for the purposes authorised  and/or to learn about our products and services, and solely in compliance with these Terms; provided that you do not remove any proprietary notice language in our content or part thereof, do not copy or post such content or part of content to any networked computer or broadcast it in any media, make no modifications to any such content or part of content and not make any additional representations or warranties relating to the Services or/and Ankora’s products or/and services.`
   },
   {

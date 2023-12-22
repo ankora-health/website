@@ -24,7 +24,7 @@ const Index = () => {
           >
             Ankora dashboard allows you to effectively manage your patient’s
             data; your Nurses and Doctors Schedule, and all your hospital
-            facilities. Let’s work together
+            facilities. Let’s work together!
           </h2>
           <div className="flex flex-col gap-[1.19rem]">
             <ExternalLinks

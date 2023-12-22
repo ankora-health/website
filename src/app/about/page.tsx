@@ -14,7 +14,7 @@ const Index = () => {
             <h1
               className={`${nunito800.className} desktop:text-[3.625rem] text-4xl leading-[2.625rem] desktop:leading-[4.25rem] text-grey-900 desktop:w-[34rem]`}
             >
-              Our story, Why we have done what we did
+              Our story, Why we have done what we did!
             </h1>
             <p
               className={`${nunito400.className} text-base leading-normal desktop:text-xl text-grey-700 desktop:w-[37.1875rem]`}
@@ -60,7 +60,7 @@ const Index = () => {
               className={`${nunito400.className} text-accent-25 text-base desktop:text-xl desktop:min-w-[49ch] desktop:max-w-[49ch] leading-[normal] desktop:leading-[30px]`}
             >
               To make healthcare more accessible, efficient, and personalised for
-              both the patients and healthcare stakeholders in Africa
+              both the patients and healthcare stakeholders in Africa.
             </p>
           </div>
           <Button className="min-w-max">
