@@ -82,7 +82,7 @@ const Footer = () => {
               className={`${nunito400.className} text-grey-700 text-sm mb-[1.94rem] leading-[1.375rem]`}
             >
               We provide more than just healthcare solutions but redefine the
-              experience for Patients and Caregivers
+              experience for Patients and Caregivers.
             </span>
             <Button className="desktop:text-xl w-max">
               <a target="_blank" href="https://calendly.com/ankora-support/30min">

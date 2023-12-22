@@ -67,7 +67,7 @@ const Index = () => {
                 <h3 className={`text-grey-900 text-2xl text-left ${nunito600.className} desktop:leading-[2.40625rem]`}>
                   {`${idx + 1}. ${label}`}
                 </h3>
-                <div className={`${nunito400.className} text-grey-700 text-base leading-[1.5rem] desktop:text-xl desktop:leading-[2.04625rem] [&>li]:list-disc [&>h6]:font-bold [&>h6]:pt-2`}
+                <div className={`${nunito400.className} text-grey-700 text-base text-left leading-[1.5rem] desktop:text-xl desktop:leading-[2.04625rem] [&>li]:list-disc [&>h6]:font-bold [&>h6]:pt-2 [&>ol>li]:mb-4 [&>ol>li:last-of-type]:mb-0 [&>li]:mb-4 [&>li:last-of-type]:mb-0`}
                 >
                   {parse(content)}
                 </div>

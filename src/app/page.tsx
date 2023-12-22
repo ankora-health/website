@@ -43,7 +43,7 @@ const imageCardContent = [
     height: 216,
     width: 384,
     img: patientRecord,
-    text: "Easy and Unified record for all patients",
+    text: "Easy and unified record for all patients",
   },
   {
     title: "Robost Reporting Systems",
@@ -71,21 +71,21 @@ const imageCardContent = [
     height: 304,
     width: 367,
     img: staffAvailability,
-    text: `Manage staffs schedules and work hours`,
+    text: `Manage staff schedules and work hours`,
   },
   {
     title: "Appointment Scheduling",
     height: 256,
     width: 279,
     img: appointment,
-    text: `Easy hospital bill & HMO management`,
+    text: `Optimize patient appointments and provider schedules`,
   },
   {
     title: "Task Management System",
     height: 192,
     width: 408,
     img: taskManagement,
-    text: `Efficient Task allocation for hospital staffs`,
+    text: `Efficient task allocation for hospital staffs`,
   },
 ];
 
@@ -169,7 +169,7 @@ const Index = () => {
               <p className={`${nunito500.className} text-lg desktop:text-xl leading-[1.75rem] text-grey-700 desktop:min-w-[47ch] desktop:max-w-[47ch]`}>
                 Enhance your patient care by digitizing your operations using
                 the power of technology. Ankora is your partner in transforming
-                the way you deliver healthcare services
+                the way you deliver healthcare services.
               </p>
               <Button>
                 <a target="_blank" href="https://calendly.com/ankora-support/30min">
@@ -189,7 +189,7 @@ const Index = () => {
           </section>
         </Container>
       </div>
-      <Container className="flex flex-col w-full pt-[4.94rem] mx-auto gap-[3.75rem]">
+      <Container id="features" className="flex flex-col w-full pt-[4.94rem] mx-auto gap-[3.75rem]">
         <div className="flex flex-col gap-[0.31rem] w-[100%] justify-center items-center">
           <h2 className={`${nunito700.className} text-grey-900 leading-normal text-[1.625rem] desktop:text-[2.375rem] text-center w-10/12`}>
             Easy Healthcare Unification
@@ -219,7 +219,7 @@ const Index = () => {
             })}
         </div>
       </Container>
-      <div id="features" className="bg-grey-900 w-[100%] flex justify-center">
+      <div className="bg-grey-900 w-[100%] flex justify-center">
         <Container className="py-14 px-[1.56rem] desktop:px-0 desktop:py-[7.06rem] w-[100%] flex flex-col gap-[3.44rem]">
           <div className="flex justify-between w-[100%] flex-col desktop:flex-row gap-[2.19rem] desktop:items-end">
             <div className="flex flex-col">
