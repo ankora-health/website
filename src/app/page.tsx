@@ -232,7 +232,9 @@ const Index = () => {
                 Ankora enables data-driven quality improvement initiatives.
               </h5>
             </div>
-            <Button>Book a Demo</Button>
+            <Button>
+              <a href="https://calendly.com/ankora-support/30min">Book a Demo</a>  
+            </Button>
           </div>
           <div className="flex gap-[1.88rem] w-[100%] flex-wrap justify-center">
             {content.length > 0 &&

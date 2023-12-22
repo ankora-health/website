@@ -12,7 +12,7 @@ const links = [
   { href: `/faqs`, label: `FAQs` },
   { href: `/contact`, label: `Contact Us` },
   { href: `https://app.ankora.health`, label: `Sign In` },
-  { href: `#`, label: `Book a Demo` },
+  { href: `https://calendly.com/ankora-support/30min`, label: `Book a Demo` },
 ];
 
 const itemVariants = {
