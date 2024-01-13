@@ -5,10 +5,10 @@ import NavLink from "@/components/navLink";
 import useHash from "@/hooks/useHash";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { nunito800, nunito600, nunito400, nunito700 } from "@/styles/fonts";
-import { terms } from "./terms";
+import { articles } from "./articles";
 
 
-const Index = () => {
+const PrivacyComponent = () => {
   const containerId = "containerElement"
   const { hash, handleScroll } = useHash(containerId);
   const desktop = useMediaQuery('(min-width: 1240px)');
@@ -18,11 +18,8 @@ const Index = () => {
       <h1
         className={`${desktop ? nunito800.className : nunito700.className} text-4xl desktop:text-[3.625rem] leading-[2.625rem] desktop:leading-[4.25rem] text-grey-900 desktop:pb-[3.06rem]`}
       >
-        Terms Of Use
+        Privacy Policy
       </h1>
-      <p className={`${nunito400.className} text-grey-700 text-base leading-[1.5rem] desktop:text-xl desktop:leading-[2.04625rem] pb-5`}>
-        Welcome to our Terms and Conditions of Use. It might be alluring to overlook these Terms of Service, yet it’s crucial to define the expectations regarding your use of Ankora’s services and what we anticipate from you.
-      </p>
       <hr className="hidden desktop:block bg-gradient-to-b from-[rgba(0,0,0,0.20)] via-[rgba(0,0,0,0.20)] to-[#EDE9E5]" />
 
       <section className="flex justify-between pt-[1.8rem] desktop:pt-[4.12rem] gap-[2.38rem] mb-[2.56rem]">
@@ -33,7 +30,7 @@ const Index = () => {
             sections
           </h2>
           <ul className="flex flex-col gap-[0.44rem]">
-            {terms.map(({ href, label }, idx) => {
+            {articles.map(({ href, label }, idx) => {
                 const isActive = href === hash;
                 const activeStyles = "bg-accent-25 rounded-lg";
 
@@ -53,31 +50,32 @@ const Index = () => {
               })}
           </ul>
         </div>
-        <div 
-          id={containerId}
-          className="flex flex-col gap-[3.06rem] desktop:max-h-[55rem] desktop:overflow-y-auto desktop:no-scrollbar"
+        <div
+          id={containerId} 
+          className="flex flex-col gap-[3.06rem] desktop:max-h-[48rem] desktop:overflow-y-auto desktop:no-scrollbar"
         >
-          {terms.map(({ href, label, content }, idx) => {
-            return (
-              <article
-                key={idx}
-                id={href.substring(1)}
-                className="flex flex-col text-justify gap-[0.94rem]"
-              >
-                <h3 className={`text-grey-900 text-2xl text-left ${nunito600.className} desktop:leading-[2.40625rem]`}>
-                  {`${idx + 1}. ${label}`}
-                </h3>
-                <div className={`${nunito400.className} text-grey-700 text-base text-left leading-[1.5rem] desktop:text-xl desktop:leading-[2.04625rem] [&>li]:list-disc [&>h6]:font-bold [&>h6]:pt-2 [&>ol>li]:mb-4 [&>ol>li:last-of-type]:mb-0 [&>li]:mb-4 [&>li:last-of-type]:mb-0`}
+          {articles.map(({ href, label, content }, idx) => {
+              return (
+                <article
+                  key={idx}
+                  id={href.substring(1)}
+                  className="flex flex-col text-justify gap-[0.94rem]"
                 >
-                  {parse(content)}
-                </div>
-              </article>
-            );
-          })}
+                  <h3 className={`text-grey-900 text-2xl text-left ${nunito600.className} desktop:leading-[2.40625rem]`}>
+                    {`${idx + 1}. ${label}`}
+                  </h3>
+                  <p className={`${nunito400.className} text-grey-700 text-base leading-[1.5rem] text-left desktop:text-xl desktop:leading-[2.04625rem] [&>li]:list-roman [&>li]:pr-4 [&>li]:mb-4 [&>li:last-of-type]:mb-0`}
+                  >
+                    {parse(content)}
+                  </p>
+                </article>
+              );
+            })}
+            <b>Last updated October 2023</b>
         </div>
       </section>
     </Container>
   );
 };
 
-export default Index;
+export default PrivacyComponent;

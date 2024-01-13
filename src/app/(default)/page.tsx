@@ -18,7 +18,8 @@ import staffAvailability from "@/assets/svg/staffAvailability.svg";
 import taskManagement from "@/assets/svg/taskManagement.svg";
 import Button from "@/components/button";
 import { CheckCircleIcon } from "@/assets/svg";
-import { landingPage } from "../../images";
+import { landingPage } from "../../../images";
+import { Metadata } from "next";
 
 interface CardProps {
   title: string;
@@ -116,6 +117,10 @@ const content = [
   },
 ];
 
+export const metadata: Metadata = {
+  title: 'Home',
+};
+
 const Card: React.FC<CardProps> = ({ title, children }) => {
   return (
     <article className="flex flex-col bg-[#353534] rounded-[1.625rem] py-[2.5rem] px-[1.25rem] w-[24.5rem]">
@@ -212,7 +217,7 @@ const Index = () => {
                     src={el.img}
                     width={el.width}
                     height={el.height}
-                    alt={`landing_page_image${idx}`}
+                    alt={el.title}
                   />
                 </ImageCard>
               );

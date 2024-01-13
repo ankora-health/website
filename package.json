@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@types/react-scroll": "^1.8.10",
-    "framer-motion": "^10.12.5-alpha.1",
+    "framer-motion": "^10.18.0",
     "html-react-parser": "^5.0.7",
     "next": "14.0.3",
     "prettier": "^3.1.0",
