@@ -17,6 +17,7 @@ interface Props {
 
 interface IconProps {
   href: string;
+  alt?: string;
   icon: React.ReactElement;
 }
 
@@ -35,10 +36,10 @@ const links: Props[] = [
 ];
 
 const linkIcons: IconProps[] = [
-  // { href: `#`, icon: <FacebookIcon /> },
-  { href: `https://x.com/ankora_health?t=gkqZnpPEscdURsyHIfhKSw&s=31`, icon: <XIcon /> },
-  { href: `https://www.linkedin.com/company/ankora-health/`, icon: <LinkedInIcon /> },
-  // { href: `#`, icon: <InstagramIcon /> },
+  // { href: `#`, icon: <FacebookIcon />, alt: `facebook` },
+  { href: `https://x.com/ankora_health?t=gkqZnpPEscdURsyHIfhKSw&s=31`, icon: <XIcon />, alt: `twitter` },
+  { href: `https://www.linkedin.com/company/ankora-health/`, icon: <LinkedInIcon />, alt: `linkedIn` },
+  // { href: `#`, icon: <InstagramIcon />, alt: `instagram` },
 ];
 
 const Navigation: React.FC<NavigationProps> = ({ links, title }) => {
