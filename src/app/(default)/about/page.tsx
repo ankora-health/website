@@ -2,7 +2,12 @@ import Container from "@/components/container";
 import { nunito400, nunito800 } from "@/styles/fonts";
 import Image from "next/image";
 import Button from "@/components/button";
-import { about_us } from "../../../images";
+import { about_us } from "../../../../images";
+import { Metadata } from "next/types";
+
+export const metadata: Metadata = {
+  title: 'About Us',
+};
 
 const Index = () => {
 

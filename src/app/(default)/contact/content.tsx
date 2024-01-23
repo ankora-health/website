@@ -8,7 +8,8 @@ import { LocationIcon } from "@/assets/svg/location";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import Calendly from "./components/calendly";
 
-const Index = () => {
+
+const ContactComponent = () => {
   const desktop = useMediaQuery('(min-width: 1240px)');
   return (
     <div className="w-screen contact-us-background-gradient mb-[3.88rem]">
@@ -50,4 +51,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default ContactComponent;

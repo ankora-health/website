@@ -5,8 +5,7 @@ import useMediaQuery from "@/hooks/useMediaQuery";
 import { nunito800, nunito700 } from "@/styles/fonts";
 import { articles } from "./articles";
 
-
-const Index = () => {
+const FaqComponent = () => {
   const desktop = useMediaQuery('(min-width: 1240px)');
   return (
     <Container className={`flex flex-col w-[100%] mt-[3.31rem] mb-[2.75rem] desktop:mb-[4.81rem] desktop:mx-auto desktop:pt-[4.47rem] desktop:pl-[3.87rem] desktop:pr-[3.5rem] desktop:pb-[4.07rem] gap-[1.18rem] desktop:gap-0 bg-white`}>
@@ -30,4 +29,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default FaqComponent;

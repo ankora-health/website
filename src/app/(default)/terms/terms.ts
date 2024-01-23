@@ -1,12 +1,12 @@
 export const terms = [
   {
     href: "#terms_of_use",
-    label: "Terms of Use",
+    label: "Terms",
     content: `
       Throughout this Terms of Use, the following terms shall have the meanings ascribed herein: <br />
       <li>“Ankora”, “we”, “us”, or “our” refers to Ankora Health Limited; </li>
       <li>“You”, “customer”, and “user” refers to you, users of our Services and any entity or organization you or such users represent;</li>
-      <li>“Parties” refers to Ankora and the customer collectively and “Party” refers to Ankora or the Customer resoectively;</li>
+      <li>“Parties” refers to Ankora and the customer collectively and “Party” refers to Ankora or the Customer respectively;</li>
       <li>“Website” refers to [www.ankora.health.com] and its sub-domains, our mobile apps and services which incorporates this Terms of Use;</li> 
       <li>“Services” refers to products and services branded with the Ankora name, collectively, the Website, widgets, information, services, email notifications and other media, or portions of such media, through which you have accessed this Terms of Use.</li> <br />
       By using our website [www.ankora.health.com] and all related sites and/or services, you agree to these Terms of Use. The website Privacy Policy (where applicable) are incorporated by reference into these Terms of Use. <br />
@@ -27,7 +27,8 @@ export const terms = [
     label: "Who May Use Our Services?",
     content: `
       You may use the Services only if you agree to form a binding contract with the Company and are not a person barred from receiving services under the laws of the applicable jurisdiction. If you are accepting these Terms and using the Services on behalf of a company, business, or organization, you represent and warrant that you are authorized to do so.<br />
-      <h6>Eligibility</h6>
+
+    <h6>Eligibility</h6>
     <p>By using the Services, you represent that:</p>
     <ol>
       <li>a) You have attained the age of 18 years; or individuals below the age 18 years may use the platform only
@@ -226,14 +227,14 @@ export const terms = [
   },
   {
     href: "#privacy_policy",
-    label: "Privacy Policy",
+    label: "Our Privacy Policy",
     content: `
       You agree to the Ankora’s Privacy Policy, which explains how we collect, use and protect the personal information you provide to us.
     `,
   },
   {
     href: "#contact_us",
-    label: "Contact Us",
+    label: "Contact",
     content: `
       If you have any questions about these Terms, please contact us at <a href="mailto:support@ankora.health"><b>support@ankora.health</b></a>.
     `,
