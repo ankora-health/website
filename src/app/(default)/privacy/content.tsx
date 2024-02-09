@@ -6,6 +6,7 @@ import useHash from "@/hooks/useHash";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { nunito800, nunito600, nunito400, nunito700 } from "@/styles/fonts";
 import { articles } from "./articles";
+import { m } from 'framer-motion';
 
 
 const PrivacyComponent = () => {
@@ -15,11 +16,15 @@ const PrivacyComponent = () => {
 
   return (
     <Container className="flex flex-col w-[100%] pt-[3.5rem] desktop:pt-[7.81rem] mx-[auto]">
-      <h1
+      <m.h1
+        initial={{ opacity: 0, y: '50px' }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }} 
         className={`${desktop ? nunito800.className : nunito700.className} text-4xl desktop:text-[3.625rem] leading-[2.625rem] desktop:leading-[4.25rem] text-grey-900 desktop:pb-[3.06rem]`}
       >
         Privacy Policy
-      </h1>
+      </m.h1>
       <hr className="hidden desktop:block bg-gradient-to-b from-[rgba(0,0,0,0.20)] via-[rgba(0,0,0,0.20)] to-[#EDE9E5]" />
 
       <section className="flex justify-between pt-[1.8rem] desktop:pt-[4.12rem] gap-[2.38rem] mb-[2.56rem]">
