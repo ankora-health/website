@@ -1,12 +1,12 @@
+import IndexComponent from "./content";
 import { Metadata } from "next/types";
-import AboutComponent from "./aboutComponent";
 
 export const metadata: Metadata = {
-  title: 'About Us',
+  title: 'Home',
 };
 
 const Index = () => {
-  return <AboutComponent />
+  return <IndexComponent />
 };
 
 export default Index;

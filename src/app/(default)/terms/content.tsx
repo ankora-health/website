@@ -6,6 +6,7 @@ import useHash from "@/hooks/useHash";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { nunito800, nunito600, nunito400, nunito700 } from "@/styles/fonts";
 import { terms } from "./terms";
+import { m } from 'framer-motion';
 
 
 const TermsComponent = () => {
@@ -15,11 +16,15 @@ const TermsComponent = () => {
 
   return (
     <Container className="flex flex-col w-[100%] pt-[3.5rem] desktop:pt-[7.81rem] mx-[auto]">
-      <h1
+      <m.h1
+        initial={{ opacity: 0, y: '50px' }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }} 
         className={`${desktop ? nunito800.className : nunito700.className} text-4xl desktop:text-[3.625rem] leading-[2.625rem] desktop:leading-[4.25rem] text-grey-900 desktop:pb-[3.06rem]`}
       >
         Terms Of Use
-      </h1>
+      </m.h1>
       <p className={`${nunito400.className} text-grey-700 text-base leading-[1.5rem] desktop:text-xl desktop:leading-[2.04625rem] pb-5`}>
         Welcome to our Terms and Conditions of Use. It might be alluring to overlook these Terms of Service, yet it’s crucial to define the expectations regarding your use of Ankora’s services and what we anticipate from you.
       </p>

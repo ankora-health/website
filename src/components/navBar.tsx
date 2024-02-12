@@ -1,5 +1,5 @@
 'use client'
-import { AnimatePresence, motion, useCycle } from "framer-motion";
+import { AnimatePresence, m, useCycle } from "framer-motion";
 import {Logo } from "@/assets/svg";
 import Container from "./container";
 import Button from "./button";
@@ -86,7 +86,7 @@ const NavBar = () => {
       {/* mobile menu */}
       <AnimatePresence>
         {open && (
-          <motion.div 
+          <m.div 
             className="lg:hidden flex fixed justify-center bg-[#FFFBF2] w-screen h-screen"
             initial={{ height: 0 }}
             animate={{ height: "100vh" }}
@@ -95,7 +95,7 @@ const NavBar = () => {
               transition: { delay: 0.7, duration: 0.3 }
             }}
           >
-            <motion.ul  
+            <m.ul  
               className='flex pt-36 flex-col w-full items-center'
               initial="closed"
               animate="open"
@@ -104,7 +104,7 @@ const NavBar = () => {
             >
               {links.slice(0, 4).map(({ href, label }, idx) => {
                 return (
-                  <motion.li
+                  <m.li
                     key={idx}
                     whileHover={{ scale: 1.1 }}
                     variants={itemVariants}
@@ -118,13 +118,13 @@ const NavBar = () => {
                     >
                       {label}
                     </NavLink>
-                  </motion.li>
+                  </m.li>
                 )
               })}
 
               {links.slice(4, 6).map(({ href, label }, idx) => {
                 return (
-                  <motion.li
+                  <m.li
                     key={idx}
                     whileHover={{ scale: 1.1 }}
                     variants={itemVariants}
@@ -137,11 +137,11 @@ const NavBar = () => {
                     >
                       <a target="_blank" href={href}>{label}</a>
                     </Button>
-                  </motion.li>
+                  </m.li>
                 )
               })}
-            </motion.ul>
-          </motion.div>
+            </m.ul>
+          </m.div>
         )}
       </AnimatePresence>
       {/* mobile menu */}

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import React from "react";
 
 interface Props {
@@ -13,7 +13,7 @@ export const Hamburger: React.FC<Props> = ({ toggle, open }) => (
     onClick={toggle}
   >
     <svg width="23" height="18" viewBox="0 0 23 18">
-      <motion.path
+      <m.path
         fill="transparent"
         strokeWidth="2.5"
         stroke="black"
@@ -26,7 +26,7 @@ export const Hamburger: React.FC<Props> = ({ toggle, open }) => (
           open: { d: "M 3 16.5 L 17 2.5" }
         }}
       />
-      <motion.path
+      <m.path
         fill="transparent"
         strokeWidth="2.5"
         stroke="black"
@@ -40,7 +40,7 @@ export const Hamburger: React.FC<Props> = ({ toggle, open }) => (
         }}
         transition={{ duration: 0.05 }}
       />
-      <motion.path
+      <m.path
         fill="transparent"
         strokeWidth="2.5"
         stroke="black"

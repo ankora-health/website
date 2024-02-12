@@ -104,6 +104,8 @@ body {
   }
 }
 
+
+
 a {
   transition-duration: 0.2s;
   transition-property: all;
@@ -119,4 +121,283 @@ button:hover {
 
 .calendly-inline-widget {
   height: 780px !important;
+}
+
+@keyframes slide-in-left {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in-left {
+  from {
+    transform: scale(0);
+    transform-origin: 0% 50%;
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: 0% 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in-center {
+  from {
+    transform: scale(0);
+    transform-origin: 50% 50%;
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes animate-in-and-out {
+	entry 0%  {
+		opacity: 0; transform: translateY(100%);
+	}
+	entry 100%  {
+		opacity: 1; transform: translateY(0);
+	}
+
+	exit 0% {
+		opacity: 1; transform: translateY(0);
+	}
+	exit 100% {
+		opacity: 0; transform: translateY(-100%);
+	}
+}
+
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.1s both;
+}
+
+.animate-scale-in-left {
+  animation: scale-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
+}
+
+.animate-scale-in-center {
+  animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
+}
+
+.animate-scale-in-center-1 {
+  animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.75s both;
+}
+
+.animate-scale-in-center-2 {
+  animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
+}
+
+.animate-scale-in-center-3 {
+  animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+}
+
+.animate-view {
+	animation: linear animate-in-and-out;
+	animation-timeline: view();
+}
+
+
+
+
+.card {
+	--index0: calc(var(--index) - 1); /* 0-based index */
+	--reverse-index: calc(var(--numcards) - var(--index0)); /* reverse index */
+	--reverse-index0: calc(var(--reverse-index) - 1); /* 0-based reverse index */
+}
+
+@keyframes scale {
+	to {
+		transform:
+			scale(calc(1.1 - calc(0.1 * var(--reverse-index))));
+	}
+}
+
+#cards {
+	--numcards: 4;
+	view-timeline-name: --cards-element-scrolls-in-body;
+}
+
+.card__content {
+	--start-range: calc(var(--index0) / var(--numcards) * 100%);
+	--end-range: calc((var(--index)) / var(--numcards) * 100%);
+
+	animation: linear scale forwards;
+	animation-timeline: --cards-element-scrolls-in-body;
+	animation-range: exit-crossing var(--start-range) exit-crossing var(--end-range);
+}
+
+
+@keyframes adjust-z-index {
+  0% {
+    z-index: 1;
+  }
+  50% {
+    z-index: 100; /* When at the center, be on top */
+  }
+  100% {
+    z-index: 1;
+  }
+}
+
+@keyframes rotate-cover {
+  0% {
+    transform: translateX(-100%) rotateY(-45deg);
+  }
+  35% {
+    transform: translateX(0) rotateY(-45deg);
+  }
+  50% {
+    transform: rotateY(0deg) translateZ(1em) scale(1.5);
+  }
+  65% {
+    transform: translateX(0) rotateY(45deg);
+  }
+  100% {
+    transform: translateX(100%) rotateY(45deg);
+  }
+}
+
+
+.cards li {
+  /* Track this element as it intersects the scrollport */
+  view-timeline-name: --li-in-and-out-of-view;
+  view-timeline-axis: inline;
+
+  /* Link an animation to the established view-timeline and have it run during the contain phase */
+  animation: linear adjust-z-index both;
+  animation-timeline: --li-in-and-out-of-view;
+
+  /* Make the 3D stuff work… */
+  perspective: 30em;
+
+  position: relative;
+  z-index: 1;
+  will-change: z-index;
+
+  user-select: none;
+}
+
+.cards li > article {
+  /* Link an animation to the established view-timeline (of the parent li) and have it run during the contain phase */
+  animation: linear rotate-cover both;
+  animation-timeline: --li-in-and-out-of-view;
+
+  /* Prevent FOUC */
+  transform: translateX(-100%) rotateY(-45deg);
+
+  will-change: transform;
+}
+
+/* Animation that rotates the cover */
+@keyframes rotate-cover--mt {
+  0% {
+    transform: translateX(-100%) rotateY(-45deg);
+    left: auto; /* Workaround for https://crbug.com/1421690 */
+  }
+  35% {
+    transform: translateX(0) rotateY(-45deg);
+  }
+  50% {
+    transform: rotateY(0deg) translateZ(1em) scale(1.5);
+  }
+  65% {
+    transform: translateX(0) rotateY(45deg);
+  }
+  100% {
+    transform: translateX(100%) rotateY(45deg);
+  }
+}
+#controls:has(#force-main-thread:checked) ~ .cards li > article {
+  animation-name: rotate-cover--mt;
+}
+
+.is-embed #controls {
+  display: none;
+}
+
+@layer demo {
+	@layer base {
+		.cards, .cards * {
+			box-sizing: border-box;
+			padding: 0;
+			margin: 0;
+		}
+
+
+
+		.cards {
+			list-style: none;
+      overflow-x: scroll;
+			width: 100%;
+			white-space: nowrap;
+		}
+
+		@layer scroll-snapping {
+			/* only enable snapping when not dragging round*/
+			#controls:has(#scroll-snapping:checked) ~ .cards:not(.active) {
+				scroll-snap-type: x mandatory;
+			}
+			#controls:has(#scroll-snapping:checked) ~ .cards li {
+				scroll-snap-align: center;
+			}
+		}
+
+		.cards li {
+			display: inline-block;
+			width: var(--cover-size);
+			height: var(--cover-size);
+		}
+
+		.cards li article {
+			display: block;
+			width: var(--cover-size);
+			height: var(--cover-size);
+
+			-webkit-box-reflect: below 0.5em
+				linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25));
+		}
+
+		.cards {
+			--size: 6;
+			min-height: calc(var(--cover-size) * 4.5);
+			/* width: calc(var(--cover-size) * var(--size)); */
+			margin: 0 auto;
+			padding: calc(var(--cover-size) / 3 * 2) 0;
+			position: relative;
+		}
+
+		/* Because the total size is 6, with 1 cover in the middle, there’s space for 5 left … so 2.5 on each side */
+		/* Didn’t work (on the right): `calc(50% - (var(--cover-size) / 2));` */
+		.cards li:first-of-type {
+			margin-left: calc(50% - (var(--cover-size) / 2));
+		}
+		.cards li:last-of-type {
+			margin-right: calc(50% - (var(--cover-size) / 2));
+		}
+	}
 }
