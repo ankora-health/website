@@ -53,7 +53,7 @@ export const imageCardContent = [
     text: "Easy and unified record for all patients",
   },
   {
-    title: "Robust Reporting Systems",
+    title: "Robust Reporting System",
     img: reporting,
     text: `Generated activity charts and statistics`,
   },

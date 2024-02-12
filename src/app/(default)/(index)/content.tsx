@@ -13,26 +13,22 @@ import Button from "@/components/button";
 import { content, imageCardContent, landingPage } from "../../../../constant";
 import { ImageCard } from "@/components/imageCard";
 import { Card } from "@/components/card";
-import { useScroll, useTransform, m } from "framer-motion";
+import { m } from "framer-motion";
 
 
 const IndexComponent = () => {
-  const ref = useRef<HTMLDivElement | null>(null);
-  const { scrollYProgress } = useScroll({ target: ref })
-  const transform = useTransform(scrollYProgress, [0, 1], ['0%', `-90%`]);
   const [loading, setLoading] = useState<boolean>(true);
-
-
+  const ref = useRef<HTMLDivElement | null>(null);
 
   const h1Class = `${nunito800.className} text-4xl desktop:text-[3.625rem] leading-[2.625rem] desktop:leading-[3rem] text-grey-900 inline-flex`;
   const h1ClassAccent = `${nunito800.className} text-4xl desktop:text-[3.625rem] leading-[2.625rem] desktop:leading-[3rem] text-accent-21 inline-flex`;
 
   return (
-    <div className="flex w-screen h-max flex-col mb-[2.5rem] bg-white">
+    <div ref={ref} className="flex w-screen h-max flex-col mb-[2.5rem] bg-white">
       <div className="w-screen landing-page-background-gradient">
         <Container className="flex w-full desktop:mx-auto destop:pb-[8.56rem]">
           <section className="flex w-full pt-[3.5rem] desktop:pt-[3.88rem] items-center gap-[2.31rem] desktop:gap-10 flex-col desktop:flex-row">
-            <div className="flex flex-col w-[100%] gap-[1.12rem] desktop:gap-[1.5rem]">
+            <div className="hidden desktop:flex flex-col w-[100%] gap-[1.12rem] desktop:gap-[1.5rem]">
               <div className="flex desktop:w-[669px]">
                 <m.span 
                   initial={{ opacity: 0, x: '-100px' }}
@@ -85,16 +81,63 @@ const IndexComponent = () => {
                 </m.span>
               </div>
                
-              <p className={`${nunito500.className} text-lg desktop:text-xl leading-[1.75rem] text-grey-700 desktop:min-w-[47ch] desktop:max-w-[47ch] animate-scale-in-center`}>
+              <m.p 
+                initial={{ opacity: 0, scale: 0, transformOrigin: `0% 50%` }}
+                whileInView={{ opacity: 1, scale: 1, transformOrigin: `0% 50%` }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className={`${nunito500.className} text-lg desktop:text-xl leading-[1.75rem] text-grey-700 desktop:min-w-[47ch] desktop:max-w-[47ch] animate-scale-in-center`}>
                 Enhance your patient care by digitizing your operations using
                 the power of technology. Ankora is your partner in transforming
                 the way you deliver healthcare services.
-              </p>
-              <Button className="animate-scale-in-center">
-                <a target="_blank" href="https://calendly.com/ankora-support/30min">
-                  Get Started
-                </a>
-              </Button>
+              </m.p>
+              <m.div
+                initial={{ opacity: 0, scale: 0.25, transformOrigin: `center` }}
+                whileInView={{ opacity: 1, scale: 1, transformOrigin: `center` }}
+                transition={{ duration: 0.5, delay: 0.15 }}
+                viewport={{ once: true }} 
+              >
+                <Button className="animate-scale-in-center">
+                  <a target="_blank" href="https://calendly.com/ankora-support/30min">
+                    Get Started
+                  </a>
+                </Button>
+              </m.div>
+            </div>
+
+            <div className="flex desktop:hidden flex-col w-[100%] gap-[1.12rem] desktop:gap-[1.56rem]">
+              <m.h1 
+                initial={{ opacity: 0, x: '-100px' }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }} 
+                className={`${nunito800.className} text-4xl desktop:text-[3.625rem] leading-[2.625rem] desktop:leading-[4.25rem] text-grey-900 desktop:min-w-[19ch] desktop:max-w-[19ch]`}>
+                Explore the possibilities of a redefined healthcare experience.
+              </m.h1>
+              <m.p 
+                initial={{ opacity: 0, scale: 0, transformOrigin: `0% 50%` }}
+                whileInView={{ opacity: 1, scale: 1, transformOrigin: `0% 50%` }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className={`${nunito500.className} text-lg desktop:text-xl leading-[1.75rem] text-grey-700 desktop:min-w-[47ch] desktop:max-w-[47ch]`}>
+                Enhance your patient care by digitizing your operations using
+                the power of technology. Ankora is your partner in transforming
+                the way you deliver healthcare services.
+              </m.p>
+
+              
+              <m.div
+                initial={{ opacity: 0, scale: 0.25, transformOrigin: `center` }}
+                whileInView={{ opacity: 1, scale: 1, transformOrigin: `center` }}
+                transition={{ duration: 0.5, delay: 0.15 }}
+                viewport={{ once: true }} 
+              >
+                <Button className="animate-scale-in-center">
+                  <a target="_blank" href="https://calendly.com/ankora-support/30min">
+                    Get Started
+                  </a>
+                </Button>
+              </m.div>
             </div>
             <Image
               src={landingPage.url}
@@ -117,7 +160,7 @@ const IndexComponent = () => {
             whileInView={{ opacity: 1, scale: 1, transformOrigin: 'center' }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }} 
-            className={`${nunito700.className} text-grey-900 leading-normal text-[1.625rem] desktop:text-[2.375rem] text-center w-10/12`}
+            className={`${nunito700.className} text-grey-900 leading-normal text-[1.625rem] desktop:text-[2.375rem] text-center`}
           >
             Easy Healthcare Unification
           </m.h2>
@@ -134,26 +177,26 @@ const IndexComponent = () => {
             transformation.
           </m.p>
         </div>
-        <div ref={ref} className="relative h-[200vh] py-8">
-          <div className="sticky top-[150px] flex items-center overflow-hidden px-24">
-            <m.section 
-              style={{ x: transform }} 
-              className="flex gap-16 justify-center desktop:justify-between"
-            >
-              {imageCardContent.length > 0 && imageCardContent.map((el, idx) => {
-                return (
-                  <ImageCard key={idx} description={el.text} title={el.title}>
-                    <Image
-                      src={el.img}
-                      width={400}
-                      height={257}
-                      alt={el.title}
-                    />
-                  </ImageCard>
-                );
-              })}
-            </m.section>
-          </div>
+        <div className="py-8 pt-12 flex justify-center h-auto">
+          <section className="flex gap-16 relative justify-center items-center desktop:justify-between flex-col h-max">
+            {imageCardContent.length > 0 && imageCardContent.map((el, idx) => {
+              return (
+                <ImageCard 
+                  key={idx} 
+                  description={el.text} 
+                  title={el.title}
+                  index={idx}
+                >
+                  <Image
+                    src={el.img}
+                    width={400}
+                    height={257}
+                    alt={el.title}
+                  />
+                </ImageCard>
+              )
+            })}
+          </section>
         </div>
       </Container>
       <div className="bg-grey-900 w-[100%] flex justify-center">
@@ -173,7 +216,7 @@ const IndexComponent = () => {
                 whileInView={{ opacity: 1, scale: 1, transformOrigin: `center` }}
                 transition={{ duration: 0.5, delay: 0.5 }}
                 viewport={{ once: true }} 
-                className={`${nunito400.className} desktop:text-[2.375rem] text-[1.625rem] leading-normal desktop:leading-[2.875rem] text-accent-25 max-w-[30ch]`}
+                className={`${nunito400.className} desktop:text-[2.375rem] sm:ext-[1.6rem] lg:text-[1.625rem] leading-normal desktop:leading-[2.875rem] text-accent-25 desktop:max-w-[30ch] max-w-full`}
               >
                 Ankora enables data-driven quality improvement initiatives.
               </m.h5>
