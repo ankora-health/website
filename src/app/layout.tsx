@@ -35,7 +35,9 @@ const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
       <body
         className={`flex flex-col items-center justify-between w-screen pb-[2.88rem] overflow-x-clip max-w-[1440px] desktop:mx-auto ${nunito.variable}`}
       >
-        <Motion>{children}</Motion>
+        <Motion>
+          {children}
+        </Motion>
       </body>
     </html>
   );
